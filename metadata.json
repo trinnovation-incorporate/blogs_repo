@@ -1,0 +1,26 @@
+{
+    "blogs": {
+      "oauth_flows_explained": {
+        "id": "oauth_flows_explained",
+        "title": "OAUTH 2.0 Flows Explained",
+        "author": "John Doe",
+        "date": "2023-09-15",
+        "tags": ["React", "FastAPI", "Web Development"],
+        "category": "Tech",
+        "summary": "In this post, we will be covering all OAuth 2.0 flows using GIFs that are simple and easier to understand.",
+        "path": "blogs/oauth_flows_explained.html"
+      },
+      "github_internal_working": {
+        "id": "2",
+        "title": "Building Monorepos with npm Workspaces",
+        "author_id": "author2",
+        "author_name": "Jane Smith",
+        "date": "2023-08-22",
+        "tags": ["npm", "Monorepos", "Development"],
+        "category": "Tech",
+        "summary": "A guide to setting up and managing monorepos using npm workspaces.",
+        "content_url": "blogs/github_internal_working.html"
+      }
+    }
+  }
+  

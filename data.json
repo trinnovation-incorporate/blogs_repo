@@ -1,9 +1,0 @@
-{
-    "blogs": [
-        {
-            "id": "oauth_flows_explained",
-            "title": "OAUTH 2.0 Flows Explained",
-            "file": "oauth_flows_explained.html"
-        }
-    ]
-}
