@@ -1,5 +1,16 @@
 {
     "blogs": {
+      "implement_message_queue": {
+        "title": "How to Implement Message Queues in Your Backend Application",
+        "author_name": "Trinc Academy",
+        "author_link": "www.instagram.com/trinc_academy",
+        "date": "27 Sept, 2024",
+        "tags": ["Node.js", "Message Queue","Backend"],
+        "category": "Tech",
+        "summary": "Message queueing is also used in our day-to-day notification applications, ensuring early reception of sent notifications from other services. This allows the recipient to get access to those notifications notwithstanding the time they were sent or when the recipient gets access to the notification application.",
+        "content_url": "blogs/implement_message_queue.html",
+        "display_image":"display/implement_message_queue.jpg"
+      },
       "naming_api_endpoints": {
         "title": "Best Practices for Naming API Endpoints",
         "author_name": "Trinc Academy",
@@ -21,17 +32,6 @@
         "summary": "OAuth (Open Authorization) enables third-party websites or apps to access user's data without requiring them to share their credentials.",
         "content_url": "blogs/oauth_flows_explained.html",
         "display_image":"display/oauth_flows_explained.avif"
-      },
-      "github_internal_working": {
-        "title": "Building Monorepos with npm Workspaces",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "27 Sept, 2024",
-        "tags": ["npm", "Monorepos", "Development"],
-        "category": "Tech",
-        "summary": "A guide to setting up and managing monorepos using npm workspaces.",
-        "content_url": "blogs/github_internal_working.html",
-        "display_image":"display/github_internal_working.avif"
       }
     }
   }

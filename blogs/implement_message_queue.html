@@ -1,0 +1,226 @@
+<h1 style="font-size: 2.5em; color: #1abc9c; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8)">
+	How to Implement Message Queues in Your Backend Applications
+</h1>
+
+<p style="text-align: center">
+	<img
+		src="asset/implement_message_queue/header.jpg"
+		alt="How to Implement Message Queues in Your Backend Applications"
+		style="width: 100%; max-width: 1000px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5)"
+	/>
+</p>
+
+<p>
+	The goal of every web developer is to create a product that appeals to a wide range of users. However, this comes
+	with its problems, chief among them being scalability issues to meet overwhelming user demands.
+</p>
+
+<p>
+	If not addressed, this can result in a disarray of communication among services, defeating the measures placed to
+	ensure orderly database transactions. But thank goodness, we have message brokers to the rescue.
+</p>
+
+<p>
+	In this article, we'll highlight the importance of message queuing as a best practice for backend development,
+	relevant use cases and popular message queuing tools, and how to implement message queuing in backend applications.
+</p>
+
+<p>Here are some of the prerequisites to be able to follow along in this article:</p>
+
+<ul style="list-style-type: square; padding-left: 20px">
+	<li>Knowledge of Node.js</li>
+	<li>Knowledge of microservices architecture</li>
+</ul>
+
+<h2 style="font-size: 2em; color: #1abc9c">What is Message Queuing?</h2>
+
+<p>
+	In distributed systems, several requests and queues are sent at a time. The concept of a message queue enables the
+	storage of messages in an orderly manner, allowing for the recipients of these messages and requests to process them
+	accordingly.
+</p>
+
+<p>
+	It operates asynchronously, allowing the independent functioning of different components of a distributed system.
+	Having these in place ensures that the messages sent to the recipient eventually get attended to irrespective of a
+	system downtime. The messages are securely stored until they get acknowledged.
+</p>
+
+<h3 style="font-size: 1.5em; color: #1abc9c">Relevant Use Cases of Message Brokers</h3>
+
+<p>Here are some of the real-life use cases of message brokers:</p>
+
+<ul style="list-style-type: circle; padding-left: 20px">
+	<li>
+		They are actively used in modern fintech applications to ensure seamless and orderly execution and processing of
+		financial transactions made on the application. This helps to prevent server overload and transaction errors.
+	</li>
+	<li>
+		Message queueing is also used in our day-to-day notification applications, ensuring early reception of sent
+		notifications from other services. This allows the recipient to get access to those notifications
+		notwithstanding the time they were sent or when the recipient gets access to the notification application.
+	</li>
+	<li>
+		It is also used in the financial markets for seamless and efficient execution of financial orders being made.
+		Other uses of this feature are seen in media streaming and the healthcare industry.
+	</li>
+</ul>
+
+<p>In the next paragraph, we'll discuss more about the tools that offer message queueing features.</p>
+
+<h2 style="font-size: 2em; color: #1abc9c">Examples of Popular Message Queue Services</h2>
+
+<p>
+	A wide range of applications and services offer message queueing features. Some of these services are embedded in
+	commercial cloud infrastructure providers. Here is a list of some commonly used message queueing services:
+</p>
+
+<ul style="list-style-type: disc; padding-left: 20px">
+	<li>RabbitMQ</li>
+	<li>Apache Kafka</li>
+	<li>Redis</li>
+	<li>Amazon SQS</li>
+	<li>Google Cloud Pub/sub</li>
+	<li>NATS</li>
+	<li>Pulsar</li>
+	<li>IBM MQ</li>
+</ul>
+
+<p>
+	We'll be utilizing a Rabbit MQ Cloud-as-a-service application to power our messages due to its popularity and ease
+	of use. Here is a link to the
+	<a href="https://www.cloudamqp.com/docs/index.html" style="color: #1abc9c; text-decoration: none">documentation</a>.
+	You can also check out other message queuing applications provided above.
+</p>
+
+<p>Next, we'll develop a demo project that utilizes message queuing features.</p>
+
+<h2 style="font-size: 2em; color: #1abc9c">Demo Project</h2>
+
+<p>
+	In this project, we'll use Rabbit MQ as a service cloud platform to build a simple message broker system that allows
+	for seamless, ordered communication between two Node.js servers.
+</p>
+
+<p>
+	In this tutorial, we'll create a message publisher that will serve as the sender, and a message consumer that
+	receives the messages.
+</p>
+
+<p>To begin with, we'll have to create both Node.js servers that will be communicating with each other.</p>
+
+<p>You can create two different files and initialize a Node project using npm init.</p>
+
+<p>
+	Thereafter, you can install relevant packages that will aid in the implementation of the features. We'll use the
+	amqplib library, a Node library implementation for Rabbit MQ.
+</p>
+
+<p>
+	This package allows us to swiftly communicate with RabbitMQ via the Node.js application. It seamlessly achieves this
+	due to its built-in functions for creating queues, publishing messages, and consuming messages. More details
+	regarding its usage will be discussed later.
+</p>
+
+<p>To install this in our project, kindly execute:</p>
+<p style="background-color: #1abc9c; color: #fff; padding: 10px; border-radius: 5px; display: inline-block">
+	npm i amqplib
+</p>
+
+<p>The publish function will now be drafted. After that, we'll have to initialize amqplib in our project.</p>
+<p style="background-color: #1abc9c; color: #fff; padding: 10px; border-radius: 5px; display: inline-block">
+	const amp = require("amqplib")
+</p>
+
+<p>Also, we need to set up our RabbitMQ broker which will manage our messages.</p>
+
+<p>
+	There are several ways of creating RabbitMQ servers, the most popular being installing them on a home computer and
+	then setting them up to interact with the backend servers. You can download the software
+	<a href="https://www.rabbitmq.com/docs/download" style="color: #1abc9c; text-decoration: none">here</a>. However,
+	for ease of usage, we will be utilizing a cloud-based RabbitMQ broker as a service application to generate our
+	server.
+</p>
+
+<p>
+	To get this done, kindly navigate to
+	<a href="https://www.cloudamqp.com/" style="color: #1abc9c; text-decoration: none">CloudAMQP</a> and create an
+	account. For this tutorial, an instance was created and configured to the closest region to me. On successful
+	creation of the instance, the details of the Rabbit MQ will be made available.
+</p>
+
+<p style="text-align: center">
+	<img
+		src="asset/implement_message_queue/cloudAmpq.png"
+		alt="CloudAMQP home page"
+		style="width: 100%; max-width: 1312px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5)"
+	/>
+</p>
+
+<p style="text-align: center">
+	<img
+		src="asset/implement_message_queue/instance.png"
+		alt="Creating a free instance on CloudAMQP"
+		style="width: 100%; max-width: 1287px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5)"
+	/>
+</p>
+
+<p style="text-align: center">
+	<img
+		src="asset/implement_message_queue/amqpdets.png"
+		alt="Details of the Free instance created"
+		style="width: 100%; max-width: 656px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5)"
+	/>
+</p>
+
+<p>
+	Moving on, we will be creating a message queue in which both parties can use as a connection pipeline. We will begin
+	by creating a function to send messages.
+</p>
+
+<p style="background-color: #1abc9c; color: #fff; padding: 10px; border-radius: 5px">
+	async function sendMessage(msg) { try { const connection = await amqp.connect(url); const channel = await
+	connection.createChannel(); await channel.assertQueue(queue); await channel.sendToQueue(queue, Buffer.from(msg));
+</p>
+
+<p>
+	In the code above, a connection was ensured and maintained. Thereafter, a communication channel was also created.
+	The assert queue function is then declared when executed, ensuring that the existing queue is maintained, and
+	creates the queue if it doesn't exist.
+</p>
+
+<p>The message attached to the function gets buffered and then sent to the queue created.</p>
+
+<p style="background-color: #1abc9c; color: #fff; padding: 10px; border-radius: 5px">
+	async function receiveMessage() { try { const connection = await amqp.connect(url); const channel = await
+	connection.createChannel(); await channel.assertQueue(queue); await channel.consume(queue, (msg) =&gt; {
+	console.log(`Received message: ${msg.content.toString()}`); channel.ack(msg); });
+</p>
+
+<p>
+	The receiver function also gets executed to receive any message that gets into the queue by executing the consume
+	method at the exact queue. In our case, the message is outputted as a log message.
+</p>
+
+<p>The ack function is now executed to acknowledge the message received from the queue.</p>
+
+<h2 style="font-size: 2em; color: #1abc9c">Additional info</h2>
+
+<p>
+	So far, we have completed this tutorial on message queueing and its role in facilitating seamless communication
+	across various systems. To further improve your skillset, here are some additional best practices that should be
+	implemented when building complex services:
+</p>
+
+<ul style="list-style-type: square; padding-left: 20px">
+	<li>Rate limiting</li>
+	<li>Load balancing</li>
+	<li>Application monitoring and logging</li>
+	<li>Continuous integration and deployment</li>
+</ul>
+
+<h2 style="font-size: 2em; color: #1abc9c">Summary</h2>
+
+<p>
+	We've highlighted the importance of message brokers and how to implement message queueing in a backend application.
+</p>
