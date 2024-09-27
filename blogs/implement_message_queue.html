@@ -1,133 +1,161 @@
-<style>
-	h1,
-	h2,
-	h3 {
-		color: #333;
-	}
-	h1 {
-		margin-bottom: 20px;
-		font-size: 2em;
-	}
-	h2 {
-		margin-top: 30px;
-		margin-bottom: 15px;
-		font-size: 1.5em;
-	}
-	h3 {
-		margin-top: 20px;
-		margin-bottom: 10px;
-		font-size: 1.2em;
-	}
-	p {
-		margin-bottom: 15px;
-		color: #555;
-	}
-	ul {
-		margin-left: 20px;
-		margin-bottom: 15px;
-	}
-	img {
-		max-width: 100%;
-		height: auto;
-		margin: 20px 0;
-	}
-	.code {
-		background-color: #f4f4f4;
-		border-left: 4px solid #007bff;
-		padding: 10px;
-		margin: 10px 0;
-		font-family: monospace;
-		overflow-x: auto;
-	}
-</style>
-<h1>How to Implement Message Queues in Your Backend Applications</h1>
+<h1 style="color: #333; margin-bottom: 20px; font-size: 2em">
+	How to Implement Message Queues in Your Backend Applications
+</h1>
 <p>
 	<img
 		src="assets/implement_message_queue/header.jpg"
 		alt="How to Implement Message Queues in Your Backend Applications"
+		style="max-width: 100%; height: auto; margin: 20px 0"
 	/>
 </p>
-<p>
+<p style="margin-bottom: 15px; color: #555">
 	The goal of every web developer is to create a product that appeals to a wide range of users. However, this comes
 	with its challenges, chief among them being scalability issues to meet overwhelming user demands. If not addressed,
 	this can result in disarray of communication among services, defeating the measures placed to ensure orderly
 	database transactions. Thankfully, we have message brokers to the rescue.
 </p>
-<p>
+<p style="margin-bottom: 15px; color: #555">
 	In this article, we'll highlight the importance of message queuing as a best practice for backend development,
 	relevant use cases and popular message queuing tools, and how to implement message queuing in backend applications.
 	Additionally, we'll cover best practices for using message queues effectively.
 </p>
-<p>Here are some prerequisites to follow along with this article:</p>
-<ul>
-	<li>Knowledge of <a href="https://nodejs.org/">Node.js</a></li>
-	<li>Understanding of microservices architecture</li>
+<p style="margin-bottom: 15px; color: #555">Here are some prerequisites to follow along with this article:</p>
+<ul style="margin-left: 20px; margin-bottom: 15px">
+	<li style="color: #555">Knowledge of <a href="https://nodejs.org/" style="color: #007bff">Node.js</a></li>
+	<li style="color: #555">Understanding of microservices architecture</li>
 </ul>
 
-<h2>What is Message Queuing?</h2>
-<p>
+<h2 style="color: #333; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em">What is Message Queuing?</h2>
+<p style="margin-bottom: 15px; color: #555">
 	In distributed systems, multiple requests and queues can be sent simultaneously. The concept of a message queue
 	enables the storage of messages in an orderly manner, allowing recipients to process them accordingly. This
 	asynchronous operation ensures that the various components of a distributed system function independently,
 	guaranteeing that messages sent to the recipient are eventually attended to, even in the case of system downtime.
 </p>
 
-<h3>Relevant Use Cases of Message Brokers</h3>
-<p>Here are some real-life use cases of message brokers:</p>
-<ul>
-	<li>
+<h3 style="color: #333; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em">
+	Relevant Use Cases of Message Brokers
+</h3>
+<p style="margin-bottom: 15px; color: #555">Here are some real-life use cases of message brokers:</p>
+<ul style="margin-left: 20px; margin-bottom: 15px">
+	<li style="color: #555">
 		Active use in modern fintech applications ensures seamless execution and processing of financial transactions,
 		preventing server overload and transaction errors.
 	</li>
-	<li>Utilized in notification applications, allowing timely reception of notifications sent from other services.</li>
-	<li>
+	<li style="color: #555">
+		Utilized in notification applications, allowing timely reception of notifications sent from other services.
+	</li>
+	<li style="color: #555">
 		Used in financial markets for efficient execution of financial orders. Additional uses can be seen in media
 		streaming and healthcare.
 	</li>
 </ul>
 
-<h2>Examples of Popular Message Queue Services</h2>
-<p>A wide range of applications and services offer message queueing features, including:</p>
-<ul>
-	<li><a href="https://www.rabbitmq.com/">RabbitMQ</a></li>
-	<li><a href="https://kafka.apache.org/">Apache Kafka</a></li>
-	<li><a href="https://redis.io/">Redis</a></li>
-	<li><a href="https://aws.amazon.com/sqs/">Amazon SQS</a></li>
-	<li><a href="https://cloud.google.com/pubsub/docs">Google Cloud Pub/Sub</a></li>
-	<li><a href="https://nats.io/">NATS</a></li>
-	<li><a href="https://pulsar.apache.org/">Pulsar</a></li>
-	<li><a href="https://www.ibm.com/cloud/mq">IBM MQ</a></li>
+<h2 style="color: #333; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em">
+	Examples of Popular Message Queue Services
+</h2>
+<p style="margin-bottom: 15px; color: #555">
+	A wide range of applications and services offer message queueing features, including:
+</p>
+<ul style="margin-left: 20px; margin-bottom: 15px">
+	<li style="color: #555"><a href="https://www.rabbitmq.com/" style="color: #007bff">RabbitMQ</a></li>
+	<li style="color: #555"><a href="https://kafka.apache.org/" style="color: #007bff">Apache Kafka</a></li>
+	<li style="color: #555"><a href="https://redis.io/" style="color: #007bff">Redis</a></li>
+	<li style="color: #555"><a href="https://aws.amazon.com/sqs/" style="color: #007bff">Amazon SQS</a></li>
+	<li style="color: #555">
+		<a href="https://cloud.google.com/pubsub/docs" style="color: #007bff">Google Cloud Pub/Sub</a>
+	</li>
+	<li style="color: #555"><a href="https://nats.io/" style="color: #007bff">NATS</a></li>
+	<li style="color: #555"><a href="https://pulsar.apache.org/" style="color: #007bff">Pulsar</a></li>
+	<li style="color: #555"><a href="https://www.ibm.com/cloud/mq" style="color: #007bff">IBM MQ</a></li>
 </ul>
-<p>
+<p style="margin-bottom: 15px; color: #555">
 	We'll utilize RabbitMQ as a cloud service application to power our messages due to its popularity and ease of use.
 	For more information, visit the
-	<a href="https://www.cloudamqp.com/docs/index.html">documentation</a>.
+	<a href="https://www.cloudamqp.com/docs/index.html" style="color: #007bff">documentation</a>.
 </p>
 
-<h2>Demo Project</h2>
-<p>
+<h2 style="color: #333; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em">Demo Project</h2>
+<p style="margin-bottom: 15px; color: #555">
 	In this project, we'll use RabbitMQ to build a simple message broker system allowing seamless communication between
 	two Node.js servers. We'll create a message publisher (the sender) and a message consumer (the receiver).
 </p>
-<p>
-	To get started, create two different files and initialize a Node project using <code>npm init</code>. Then, install
-	the relevant packages:
+<p style="margin-bottom: 15px; color: #555">
+	To get started, create two different files and initialize a Node project using
+	<code style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 10px; font-family: monospace"
+		>npm init</code
+	>. Then, install the relevant packages:
 </p>
-<div class="code">npm i amqplib</div>
-<p>Next, draft the publish function. Initialize <code>amqplib</code> in your project:</p>
-<div class="code">const amqp = require("amqplib");</div>
-<p>
+<div
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 10px;
+		margin: 10px 0;
+		font-family: monospace;
+	"
+>
+	npm i amqplib
+</div>
+<p style="margin-bottom: 15px; color: #555">
+	Next, draft the publish function. Initialize
+	<code style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 10px; font-family: monospace"
+		>amqplib</code
+	>
+	in your project:
+</p>
+<div
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 10px;
+		margin: 10px 0;
+		font-family: monospace;
+	"
+>
+	const amqp = require("amqplib");
+</div>
+<p style="margin-bottom: 15px; color: #555">
 	Now, set up your RabbitMQ broker, which will manage your messages. You can download RabbitMQ from
-	<a href="https://www.rabbitmq.com/docs/download">here</a>, or use a cloud-based RabbitMQ broker for ease of use.
-	Create an account on <a href="https://www.cloudamqp.com/">CloudAMQP</a> and set up an instance in your region.
+	<a href="https://www.rabbitmq.com/docs/download" style="color: #007bff">here</a>, or use a cloud-based RabbitMQ
+	broker for ease of use. Create an account on
+	<a href="https://www.cloudamqp.com/" style="color: #007bff">CloudAMQP</a> and set up an instance in your region.
 </p>
 
-<p><img src="assets/implement_message_queue/cloudAmpq.png" alt="CloudAMQP home page" /></p>
-<p><img src="assets/implement_message_queue/instance.png" alt="Creating a free instance on CloudAMQP" /></p>
-<p><img src="assets/implement_message_queue/amqpdets.png" alt="Details of the Free instance created" /></p>
+<p>
+	<img
+		src="assets/implement_message_queue/cloudAmpq.png"
+		alt="CloudAMQP home page"
+		style="max-width: 100%; height: auto; margin: 20px 0"
+	/>
+</p>
+<p>
+	<img
+		src="assets/implement_message_queue/instance.png"
+		alt="Creating a free instance on CloudAMQP"
+		style="max-width: 100%; height: auto; margin: 20px 0"
+	/>
+</p>
+<p>
+	<img
+		src="assets/implement_message_queue/amqpdets.png"
+		alt="Details of the Free instance created"
+		style="max-width: 100%; height: auto; margin: 20px 0"
+	/>
+</p>
 
-<p>Next, create a message queue for communication. The send function looks like this:</p>
-<div class="code">
+<p style="margin-bottom: 15px; color: #555">
+	Next, create a message queue for communication. The send function looks like this:
+</p>
+<div
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 10px;
+		margin: 10px 0;
+		font-family: monospace;
+	"
+>
 	async function sendMessage(msg) {<br />
 	try {<br />
 	const connection = await amqp.connect(url);<br />
@@ -140,13 +168,21 @@
 	}<br />
 	}
 </div>
-<p>
+<p style="margin-bottom: 15px; color: #555">
 	This function establishes a connection and maintains it, creating a communication channel and ensuring that the
 	queue exists or is created.
 </p>
 
-<p>The receiver function looks like this:</p>
-<div class="code">
+<p style="margin-bottom: 15px; color: #555">The receiver function looks like this:</p>
+<div
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 10px;
+		margin: 10px 0;
+		font-family: monospace;
+	"
+>
 	async function receiveMessage() {<br />
 	try {<br />
 	const connection = await amqp.connect(url);<br />
@@ -162,26 +198,32 @@
 	}<br />
 	}
 </div>
-<p>This function consumes messages from the queue, logging them as they arrive and acknowledging receipt.</p>
+<p style="margin-bottom: 15px; color: #555">
+	This function consumes messages from the queue, logging them as they arrive and acknowledging receipt.
+</p>
 
-<h2>Additional Information</h2>
-<p>
+<h2 style="color: #333; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em">Additional Information</h2>
+<p style="margin-bottom: 15px; color: #555">
 	We've covered the implementation of message queuing and its role in facilitating communication across various
 	systems. Here are some best practices for building complex services:
 </p>
-<ul>
-	<li>Rate limiting</li>
-	<li>Load balancing</li>
-	<li>Application monitoring and logging</li>
-	<li>Continuous integration and deployment</li>
+<ul style="margin-left: 20px; margin-bottom: 15px">
+	<li style="color: #555">Rate limiting</li>
+	<li style="color: #555">Load balancing</li>
+	<li style="color: #555">Application monitoring and logging</li>
+	<li style="color: #555">Continuous integration and deployment</li>
 </ul>
 
-<h2>Summary</h2>
-<p>
+<h2 style="color: #333; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em">Summary</h2>
+<p style="margin-bottom: 15px; color: #555">
 	This article highlighted the importance of message brokers and how to implement message queueing in a backend
 	application. For further reading on message queues, consider the following resources:
 </p>
-<ul>
-	<li><a href="https://www.rabbitmq.com/getstarted.html">RabbitMQ Getting Started</a></li>
-	<li><a href="https://kafka.apache.org/documentation/">Apache Kafka Documentation</a></li>
+<ul style="margin-left: 20px; margin-bottom: 15px">
+	<li style="color: #555">
+		<a href="https://www.rabbitmq.com/getstarted.html" style="color: #007bff">RabbitMQ Getting Started</a>
+	</li>
+	<li style="color: #555">
+		<a href="https://kafka.apache.org/documentation/" style="color: #007bff">Apache Kafka Documentation</a>
+	</li>
 </ul>
