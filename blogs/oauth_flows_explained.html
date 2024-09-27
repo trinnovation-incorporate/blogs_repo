@@ -1,95 +1,69 @@
-<article
-    style="max-width: 800px; margin: 0 auto; padding: 2rem; background-color: #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); border-radius: 8px;">
-    <header style="text-align: center; margin-bottom: 2rem;">
-        <h1 style="font-size: 2.5rem; color: #3498db; margin-bottom: 0.5rem;">OAuth 2.0 flows explained in GIFs</h1>
-        <p style="color: #2c3e50; font-style: italic;">Original Author: <a href="https://dev.to/hem" target="_blank"
-                style="color: #3498db; text-decoration: none;">Hem</a></p>
-        <img src="/assets/oauth_flows_explained/header.avif" alt="Header Image"
-            style="width: 100%; height: auto; border-radius: 8px; margin-top: 1rem;">
-    </header>
+<article style="max-width: 800px; margin: 0 auto; padding: 2rem; background-color: #fff; box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); border-radius: 8px">
+	<header style="text-align: center; margin-bottom: 2rem">
+		<h1 style="font-size: 2.5rem; color: #3498db; margin-bottom: 0.5rem">OAuth 2.0 flows explained in GIFs</h1>
+		<p style="color: #2c3e50; font-style: italic">Original Author: <a href="https://dev.to/hem" target="_blank" style="color: #3498db; text-decoration: none">Hem</a></p>
+		<img src="/assets/oauth_flows_explained/header.avif" alt="Header Image" style="width: 100%; height: auto; border-radius: 8px; margin-top: 1rem" />
+	</header>
 
-    <section style="padding: 1rem 0;">
-        <p style="margin-bottom: 1rem;">In this post, we will be covering all OAuth 2.0 flows using GIFs that are simple
-            and easier to understand.</p>
+	<section style="padding: 1rem 0">
+		<p style="margin-bottom: 1rem">In this post, we will be covering all OAuth 2.0 flows using GIFs that are simple and easier to understand.</p>
 
-        <blockquote
-            style="border-left: 4px solid #3498db; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #2c3e50;">
-            <strong>Note:</strong> Feel free to skip to the flows directly if you are already aware of OAuth.
-        </blockquote>
+		<blockquote style="border-left: 4px solid #3498db; padding-left: 1rem; margin: 1rem 0; font-style: italic; color: #2c3e50"><strong>Note:</strong> Feel free to skip to the flows directly if you are already aware of OAuth.</blockquote>
 
-        <h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem;">What's OAuth?</h2>
-        <p style="margin-bottom: 1rem;">OAuth (Open Authorization) enables third-party websites or apps to access user's
-            data without requiring them to share their credentials.</p>
+		<h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem">What's OAuth?</h2>
+		<p style="margin-bottom: 1rem">OAuth (Open Authorization) enables third-party websites or apps to access user's data without requiring them to share their credentials.</p>
 
-        <h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem;">Terminologies</h2>
-        <ul style="margin-bottom: 1rem; padding-left: 2rem;">
-            <li style="margin-bottom: 0.5rem;"><strong>Client:</strong> The application seeking access to resources.
-            </li>
-            <li style="margin-bottom: 0.5rem;"><strong>Resource Owner:</strong> The user who owns the resources.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Resource:</strong> Images, data exposed via APIs, etc.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Resource Server:</strong> Server hosting protected resources.
-            </li>
-            <li style="margin-bottom: 0.5rem;"><strong>Authorization Server:</strong> Server authorizing clients and
-                issuing access tokens.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>User-Agent:</strong> The browser or app used to communicate with
-                the authorization server.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Access Token:</strong> A token for accessing resources, issued
-                after successful authorization.</li>
-            <li style="margin-bottom: 0.5rem;"><strong>Refresh Token:</strong> A token used to replenish the access
-                token.</li>
-        </ul>
+		<h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem">Terminologies</h2>
+		<ul style="margin-bottom: 1rem; padding-left: 2rem">
+			<li style="margin-bottom: 0.5rem"><strong>Client:</strong> The application seeking access to resources.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Resource Owner:</strong> The user who owns the resources.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Resource:</strong> Images, data exposed via APIs, etc.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Resource Server:</strong> Server hosting protected resources.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Authorization Server:</strong> Server authorizing clients and issuing access tokens.</li>
+			<li style="margin-bottom: 0.5rem"><strong>User-Agent:</strong> The browser or app used to communicate with the authorization server.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Access Token:</strong> A token for accessing resources, issued after successful authorization.</li>
+			<li style="margin-bottom: 0.5rem"><strong>Refresh Token:</strong> A token used to replenish the access token.</li>
+		</ul>
 
-        <p style="margin-bottom: 1rem;">Example: A user grants a printing service access to their photo hosted on a
-            photo-sharing service without sharing credentials.</p>
+		<p style="margin-bottom: 1rem">Example: A user grants a printing service access to their photo hosted on a photo-sharing service without sharing credentials.</p>
 
-        <h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem;">OAuth 2.0 Flows</h2>
-        <ol style="margin-bottom: 1rem; padding-left: 2rem;">
-            <li style="margin-bottom: 0.5rem;">Authorization Code Grant</li>
-            <li style="margin-bottom: 0.5rem;">Authorization Code Grant with PKCE</li>
-            <li style="margin-bottom: 0.5rem;">Client Credentials Grant</li>
-            <li style="margin-bottom: 0.5rem;">Resource Owner Password Credentials Grant</li>
-            <li style="margin-bottom: 0.5rem;">Implicit Grant</li>
-        </ol>
+		<h2 style="font-size: 2rem; color: #3498db; margin-top: 2rem; margin-bottom: 1rem">OAuth 2.0 Flows</h2>
+		<ol style="margin-bottom: 1rem; padding-left: 2rem">
+			<li style="margin-bottom: 0.5rem">Authorization Code Grant</li>
+			<li style="margin-bottom: 0.5rem">Authorization Code Grant with PKCE</li>
+			<li style="margin-bottom: 0.5rem">Client Credentials Grant</li>
+			<li style="margin-bottom: 0.5rem">Resource Owner Password Credentials Grant</li>
+			<li style="margin-bottom: 0.5rem">Implicit Grant</li>
+		</ol>
 
-        <h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Authorization Code
-            Grant</h3>
-        <p style="margin-bottom: 1rem;">A browser-based flow for web and mobile apps, where the user is redirected to
-            the authorization endpoint to get the authorization code.</p>
+		<h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem">1. Authorization Code Grant</h3>
+		<p style="margin-bottom: 1rem">A browser-based flow for web and mobile apps, where the user is redirected to the authorization endpoint to get the authorization code.</p>
 
-        <h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Authorization Code
-            Grant with PKCE</h3>
-        <p style="margin-bottom: 1rem;">For public clients, using Proof Key for Code Exchange (PKCE) to generate a
-            secret at runtime for secure authorization.</p>
+		<h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem">2. Authorization Code Grant with PKCE</h3>
+		<p style="margin-bottom: 1rem">For public clients, using Proof Key for Code Exchange (PKCE) to generate a secret at runtime for secure authorization.</p>
 
-        <h4 style="font-size: 1.2rem; color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem;">2.1. Transformations -
-            Meet SHA256</h4>
-        <p style="margin-bottom: 1rem;">A random string (Code Verifier) is transformed into a Code Challenge using
-            SHA256.</p>
-        <img src="/assets/oauth_flows_explained/Transformations.gif" alt="SHA256 Transformation GIF"
-            style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+		<h4 style="font-size: 1.2rem; color: #2c3e50; margin-top: 1rem; margin-bottom: 0.5rem">2.1. Transformations - Meet SHA256</h4>
+		<p style="margin-bottom: 1rem">A random string (Code Verifier) is transformed into a Code Challenge using SHA256.</p>
+		<img src="/assets/oauth_flows_explained/Transformations.gif" alt="SHA256 Transformation GIF" style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease" />
 
-        <h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">3. Client Credentials
-            Grant</h3>
-        <p style="margin-bottom: 1rem;">Used for machine-to-machine communication where user consent is not needed.</p>
-        <img src="/assets/oauth_flows_explained/credentials.gif" alt="Client Credentials Grant GIF"
-            style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+		<h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem">3. Client Credentials Grant</h3>
+		<p style="margin-bottom: 1rem">Used for machine-to-machine communication where user consent is not needed.</p>
+		<img src="/assets/oauth_flows_explained/credentials.gif" alt="Client Credentials Grant GIF" style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease" />
 
-        <h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Resource Owner
-            Password Credentials Grant</h3>
-        <p style="margin-bottom: 1rem;">This flow is to be used only when there is a <em>high degree of trust</em>
-            between the resource owner and the client.</p>
-        <img src="/assets/oauth_flows_explained/owner_password.gif" alt="Resource Owner Password Credentials Grant GIF"
-            style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
+		<h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem">4. Resource Owner Password Credentials Grant</h3>
+		<p style="margin-bottom: 1rem">This flow is to be used only when there is a <em>high degree of trust</em> between the resource owner and the client.</p>
+		<img
+			src="/assets/oauth_flows_explained/owner_password.gif"
+			alt="Resource Owner Password Credentials Grant GIF"
+			style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease"
+		/>
 
-        <h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem;">5. Implicit Grant</h3>
-        <p style="margin-bottom: 1rem;">This flow is <em>no longer recommended</em> officially! The access token is
-            passed in the URL fragment, posing security risks.</p>
-        <img src="/assets/oauth_flows_explained/implicit_grant.gif" alt="Implicit Grant GIF"
-            style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-    </section>
+		<h3 style="font-size: 1.5rem; color: #2c3e50; margin-top: 1.5rem; margin-bottom: 0.5rem">5. Implicit Grant</h3>
+		<p style="margin-bottom: 1rem">This flow is <em>no longer recommended</em> officially! The access token is passed in the URL fragment, posing security risks.</p>
+		<img src="/assets/oauth_flows_explained/implicit_grant.gif" alt="Implicit Grant GIF" style="width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease" />
+	</section>
 
-    <footer style="margin-top: 2rem; text-align: center; color: #2c3e50;">
-        <p style="margin-bottom: 1rem;">Hope this post was useful. Feel free to share your thoughts and stay OAuthsome!
-        </p>
-    </footer>
+	<footer style="margin-top: 2rem; text-align: center; color: #2c3e50">
+		<p style="margin-bottom: 1rem">Hope this post was useful. Feel free to share your thoughts and stay OAuthsome!</p>
+	</footer>
 </article>
