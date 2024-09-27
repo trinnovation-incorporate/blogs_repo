@@ -1,22 +1,37 @@
 {
     "blogs": {
+      "naming_api_endpoints": {
+        "title": "Best Practices for Naming API Endpoints",
+        "author_name": "Trinc Academy",
+        "author_link": "www.instagram.com/trinc_academy",
+        "date": "27 Sept, 2024",
+        "tags": ["API", "Endpoints"],
+        "category": "Tech",
+        "summary": "Building a clear and intuitive API is critical for ensuring seamless integration. Naming conventions for API endpoints play a crucial role in maintaining consistency, simplicity, and usability. This guide explores best practices for naming your API endpoints, including REST principles, versioning strategies, and advanced query parameters.",
+        "content_url": "blogs/naming_api_endpoints.html",
+        "display_image":"display/naming_api_endpoints.avif"
+      },
       "oauth_flows_explained": {
         "title": "OAUTH 2.0 Flows Explained",
-        "author": "John Doe",
-        "date": "2023-09-15",
-        "tags": ["React", "FastAPI", "Web Development"],
+        "author_name": "Trinc Academy",
+        "author_link": "www.instagram.com/trinc_academy",
+        "date": "27 Sept, 2024",
+        "tags": ["OAuth 2.0", "Backend", "Web Development"],
         "category": "Tech",
-        "summary": "In this post, we will be covering all OAuth 2.0 flows using GIFs that are simple and easier to understand.",
-        "content_url": "blogs/oauth_flows_explained.html"
+        "summary": "OAuth (Open Authorization) enables third-party websites or apps to access user's data without requiring them to share their credentials.",
+        "content_url": "blogs/oauth_flows_explained.html",
+        "display_image":"display/oauth_flows_explained.avif"
       },
       "github_internal_working": {
         "title": "Building Monorepos with npm Workspaces",
-        "author_name": "Jane Smith",
-        "date": "2023-08-22",
+        "author_name": "Trinc Academy",
+        "author_link": "www.instagram.com/trinc_academy",
+        "date": "27 Sept, 2024",
         "tags": ["npm", "Monorepos", "Development"],
         "category": "Tech",
         "summary": "A guide to setting up and managing monorepos using npm workspaces.",
-        "content_url": "blogs/github_internal_working.html"
+        "content_url": "blogs/github_internal_working.html",
+        "display_image":"display/github_internal_working.avif"
       }
     }
   }
