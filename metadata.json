@@ -1,60 +1,70 @@
 {
-    "blogs": {
-      "scaling_database": {
-        "title": "System Design: How to Scale a Database",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "29 Sept, 2024",
-        "tags": ["System Design", "Databases","Scaling"],
-        "category": "Tech",
-        "summary": "In this article we will explore 8 strategies to scale databases to ensure your application keeps operating at optimal performance without the database becoming a bottleneck.",
-        "content_url": "blogs/scaling_database.html",
-        "display_image":"display/scaling_database.jpg"
-      },
-      "api_security_best_practices": {
-        "title": "API Security Best Practices",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "28 Sept, 2024",
-        "tags": ["API", "Security","Backend"],
-        "category": "Tech",
-        "summary": "In today's digital ecosystem, APIs (Application Programming Interfaces) are critical for enabling communication between software applications. However, with the rise of API usage comes an increasing need to secure the data they handle, particularly during its transit between systems. This article will cover the best practices to protect your API data in transit and ensure secure communication in modern applications.",
-        "content_url": "blogs/api_security_best_practices.html",
-        "display_image":"display/api_security_best_practices.jpg"
-      },
-      "implement_message_queue": {
-        "title": "How to Implement Message Queues in Your Backend Application",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "27 Sept, 2024",
-        "tags": ["Node.js", "Message Queue","Backend"],
-        "category": "Tech",
-        "summary": "Message queueing is also used in our day-to-day notification applications, ensuring early reception of sent notifications from other services. This allows the recipient to get access to those notifications notwithstanding the time they were sent or when the recipient gets access to the notification application.",
-        "content_url": "blogs/implement_message_queue.html",
-        "display_image":"display/implement_message_queue.jpg"
-      },
-      "naming_api_endpoints": {
-        "title": "Best Practices for Naming API Endpoints",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "27 Sept, 2024",
-        "tags": ["API", "Endpoints"],
-        "category": "Tech",
-        "summary": "Building a clear and intuitive API is critical for ensuring seamless integration. Naming conventions for API endpoints play a crucial role in maintaining consistency, simplicity, and usability. This guide explores best practices for naming your API endpoints, including REST principles, versioning strategies, and advanced query parameters.",
-        "content_url": "blogs/naming_api_endpoints.html",
-        "display_image":"display/naming_api_endpoints.avif"
-      },
-      "oauth_flows_explained": {
-        "title": "OAUTH 2.0 Flows Explained",
-        "author_name": "Trinc Academy",
-        "author_link": "www.instagram.com/trinc_academy",
-        "date": "27 Sept, 2024",
-        "tags": ["OAuth 2.0", "Backend", "Web Development"],
-        "category": "Tech",
-        "summary": "OAuth (Open Authorization) enables third-party websites or apps to access user's data without requiring them to share their credentials.",
-        "content_url": "blogs/oauth_flows_explained.html",
-        "display_image":"display/oauth_flows_explained.avif"
-      }
-    }
-  }
-  
+	"blogs": {
+		"multithreading": {
+			"title": "Multithreading: Maximizing Efficiency in Modern Computing",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "30 Sept, 2024",
+			"tags": ["Multithreading", "Multiprocessing", "Computing"],
+			"category": "Tech",
+			"summary": "Multithreading has become an essential concept in software development, providing a way to improve performance and make efficient use of system resources. It allows for concurrent execution of multiple parts of a program, which can significantly boost the performance of complex applications. In this blog, we will explore the fundamentals of multithreading, its advantages, challenges, and best practices in modern computing.",
+			"content_url": "blogs/multithreading.html",
+			"display_image": "display/multithreading.png"
+		},
+		"scaling_database": {
+			"title": "System Design: How to Scale a Database",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "29 Sept, 2024",
+			"tags": ["System Design", "Databases", "Scaling"],
+			"category": "Tech",
+			"summary": "In this article we will explore 8 strategies to scale databases to ensure your application keeps operating at optimal performance without the database becoming a bottleneck.",
+			"content_url": "blogs/scaling_database.html",
+			"display_image": "display/scaling_database.jpg"
+		},
+		"api_security_best_practices": {
+			"title": "API Security Best Practices",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "28 Sept, 2024",
+			"tags": ["API", "Security", "Backend"],
+			"category": "Tech",
+			"summary": "In today's digital ecosystem, APIs (Application Programming Interfaces) are critical for enabling communication between software applications. However, with the rise of API usage comes an increasing need to secure the data they handle, particularly during its transit between systems. This article will cover the best practices to protect your API data in transit and ensure secure communication in modern applications.",
+			"content_url": "blogs/api_security_best_practices.html",
+			"display_image": "display/api_security_best_practices.jpg"
+		},
+		"implement_message_queue": {
+			"title": "How to Implement Message Queues in Your Backend Application",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "27 Sept, 2024",
+			"tags": ["Node.js", "Message Queue", "Backend"],
+			"category": "Tech",
+			"summary": "Message queueing is also used in our day-to-day notification applications, ensuring early reception of sent notifications from other services. This allows the recipient to get access to those notifications notwithstanding the time they were sent or when the recipient gets access to the notification application.",
+			"content_url": "blogs/implement_message_queue.html",
+			"display_image": "display/implement_message_queue.jpg"
+		},
+		"naming_api_endpoints": {
+			"title": "Best Practices for Naming API Endpoints",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "27 Sept, 2024",
+			"tags": ["API", "Endpoints"],
+			"category": "Tech",
+			"summary": "Building a clear and intuitive API is critical for ensuring seamless integration. Naming conventions for API endpoints play a crucial role in maintaining consistency, simplicity, and usability. This guide explores best practices for naming your API endpoints, including REST principles, versioning strategies, and advanced query parameters.",
+			"content_url": "blogs/naming_api_endpoints.html",
+			"display_image": "display/naming_api_endpoints.avif"
+		},
+		"oauth_flows_explained": {
+			"title": "OAUTH 2.0 Flows Explained",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "27 Sept, 2024",
+			"tags": ["OAuth 2.0", "Backend", "Web Development"],
+			"category": "Tech",
+			"summary": "OAuth (Open Authorization) enables third-party websites or apps to access user's data without requiring them to share their credentials.",
+			"content_url": "blogs/oauth_flows_explained.html",
+			"display_image": "display/oauth_flows_explained.avif"
+		}
+	}
+}
