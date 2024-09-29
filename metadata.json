@@ -1,5 +1,16 @@
 {
     "blogs": {
+      "scaling_database": {
+        "title": "API Security Best Practices",
+        "author_name": "Trinc Academy",
+        "author_link": "www.instagram.com/trinc_academy",
+        "date": "28 Sept, 2024",
+        "tags": ["API", "Security","Backend"],
+        "category": "Tech",
+        "summary": "In today's digital ecosystem, APIs (Application Programming Interfaces) are critical for enabling communication between software applications. However, with the rise of API usage comes an increasing need to secure the data they handle, particularly during its transit between systems. This article will cover the best practices to protect your API data in transit and ensure secure communication in modern applications.",
+        "content_url": "blogs/api_security_best_practices.html",
+        "display_image":"display/api_security_best_practices.jpg"
+      },
       "api_security_best_practices": {
         "title": "API Security Best Practices",
         "author_name": "Trinc Academy",
