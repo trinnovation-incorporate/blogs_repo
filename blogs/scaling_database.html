@@ -1,5 +1,7 @@
 <header style="text-align: center; margin-bottom: 30px">
-	<h1 style="color: #2c3e50; margin-top: 20px">System Design: How to Scale a Database</h1>
+	<h1 style="font-size: 28px; font-weight: bold; color: #2c3e50; margin-top: 20px">
+		System Design: How to Scale a Database
+	</h1>
 	<img src="assets/scaling_database/header.jpg" alt="Database Scaling" style="max-width: 100%; height: auto" />
 </header>
 
@@ -20,7 +22,7 @@
 	</p>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">1. Vertical Scaling</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">1. Vertical Scaling</h2>
 		<img
 			src="assets/scaling_database/vertical-scaling.webp"
 			alt="Vertical Scaling"
@@ -41,7 +43,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">2. Indexing</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">2. Indexing</h2>
 		<p style="font-size: 16px">
 			Indexes at the back of a book help you quickly find specific information without having to go through every
 			page.
@@ -57,7 +59,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">3. Sharding</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">3. Sharding</h2>
 		<p style="font-size: 16px">
 			A single machine can only hold so much data. It will run out of space and slow down as more people start
 			using your application.
@@ -76,7 +78,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">4. Vertical Partitioning</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">4. Vertical Partitioning</h2>
 		<p style="font-size: 16px">
 			In situations where some columns are accessed more often than others, it's a good idea to split the database
 			table into smaller tables, each containing a subset of the columns from the original table.
@@ -96,7 +98,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">5. Caching</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">5. Caching</h2>
 		<p style="font-size: 16px">In almost every major application, some data is accessed more often than others.</p>
 		<p style="font-size: 16px">For example:</p>
 		<ul style="font-size: 16px">
@@ -120,7 +122,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">6. Replication</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">6. Replication</h2>
 		<p style="font-size: 16px">
 			If your database servers are only located in one region, users from other regions may experience a higher
 			latency.
@@ -159,7 +161,7 @@
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">7. Materialized Views</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">7. Materialized Views</h2>
 		<p style="font-size: 16px">
 			Some database queries are complex and can take a long time to run. This can slow down the performance of the
 			application if these queries are run often.
@@ -203,7 +205,7 @@ DO
 	</section>
 
 	<section style="margin-bottom: 40px">
-		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">8. Data Denormalization</h2>
+		<h2 style="font-size: 20px; font-weight: bold;color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">8. Data Denormalization</h2>
 		<p style="font-size: 16px">
 			Some database queries may involve <strong>multiple tables</strong> and <strong>complex joins</strong>. These
 			queries are often slow and can make the application slower for large tables.
