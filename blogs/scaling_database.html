@@ -1,266 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>System Design: How to Scale a Database</title>
-	</head>
-	<body
-		style="
-			font-family: Arial, sans-serif;
-			line-height: 1.6;
-			color: #333;
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		"
-	>
-		<header style="text-align: center; margin-bottom: 30px">
-			<img
-				src="assets/scaling_database/header.jpg"
-				alt="Database Scaling"
-				style="max-width: 100%; height: auto"
-			/>
-			<h1 style="color: #2c3e50; margin-top: 20px">System Design: How to Scale a Database</h1>
-		</header>
+<header style="text-align: center; margin-bottom: 30px">
+	<img src="assets/scaling_database/header.jpg" alt="Database Scaling" style="max-width: 100%; height: auto" />
+	<h1 style="color: #2c3e50; margin-top: 20px">System Design: How to Scale a Database</h1>
+</header>
 
-		<main>
-			<p style="font-size: 18px; margin-bottom: 20px">
-				Let's say you are building an application that needs to store <strong>user information</strong>. When
-				your app has a few hundred users, you can keep all the data on one database server.
-			</p>
+<main>
+	<p style="font-size: 18px; margin-bottom: 20px">
+		Let's say you are building an application that needs to store <strong>user information</strong>. When your app
+		has a few hundred users, you can keep all the data on one database server.
+	</p>
 
-			<p style="font-size: 18px; margin-bottom: 20px">
-				But as your app grows and you get more users, you need to store <strong>more data</strong>. If you don't
-				scale your database to handle the increased load, it can <strong>slow down</strong> your app and cause
-				problems.
-			</p>
+	<p style="font-size: 18px; margin-bottom: 20px">
+		But as your app grows and you get more users, you need to store <strong>more data</strong>. If you don't scale
+		your database to handle the increased load, it can <strong>slow down</strong> your app and cause problems.
+	</p>
 
-			<p style="font-size: 18px; margin-bottom: 30px">
-				In this article we will explore <strong>8 strategies</strong> to scale databases to ensure your
-				application keeps operating at optimal performance without the database becoming a bottleneck.
-			</p>
+	<p style="font-size: 18px; margin-bottom: 30px">
+		In this article we will explore <strong>8 strategies</strong> to scale databases to ensure your application
+		keeps operating at optimal performance without the database becoming a bottleneck.
+	</p>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">
-					1. Vertical Scaling
-				</h2>
-				<img
-					src="assets/scaling_database/vertical-scaling.webp"
-					alt="Vertical Scaling"
-					style="max-width: 100%; height: auto; margin-bottom: 20px"
-				/>
-				<p style="font-size: 16px">
-					Vertical scaling involves adding more resources (CPU, RAM, storage) to a single database server.
-					It's a quick and easy solution when you have a <strong>smaller database</strong>, but it has
-					limitations.
-				</p>
-				<p style="font-size: 16px">
-					It can become <strong>expensive</strong>, and there's a limit on how much you can scale up.
-					Additionally, vertical scaling introduces a <strong>single point of failure</strong>, as all your
-					eggs are in one basket.
-				</p>
-				<p style="font-size: 16px">
-					<strong>Example:</strong> A small e-commerce website experiences increased traffic during a holiday
-					sale. They vertically scale their database server by adding more RAM to handle the extra load.
-				</p>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">1. Vertical Scaling</h2>
+		<img
+			src="assets/scaling_database/vertical-scaling.webp"
+			alt="Vertical Scaling"
+			style="max-width: 100%; height: auto; margin-bottom: 20px"
+		/>
+		<p style="font-size: 16px">
+			Vertical scaling involves adding more resources (CPU, RAM, storage) to a single database server. It's a
+			quick and easy solution when you have a <strong>smaller database</strong>, but it has limitations.
+		</p>
+		<p style="font-size: 16px">
+			It can become <strong>expensive</strong>, and there's a limit on how much you can scale up. Additionally,
+			vertical scaling introduces a <strong>single point of failure</strong>, as all your eggs are in one basket.
+		</p>
+		<p style="font-size: 16px">
+			<strong>Example:</strong> A small e-commerce website experiences increased traffic during a holiday sale.
+			They vertically scale their database server by adding more RAM to handle the extra load.
+		</p>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">2. Indexing</h2>
-				<p style="font-size: 16px">
-					Indexes at the back of a book help you quickly find specific information without having to go
-					through every page.
-				</p>
-				<p style="font-size: 16px">
-					In the same way, <strong>database indexes</strong> help find data much faster without scanning every
-					single row in a table.
-				</p>
-				<p style="font-size: 16px">
-					Indexes are usually created on <strong>most frequently queried columns</strong> to make read
-					requests faster, but over-indexing can slow down the write performance due to overhead.
-				</p>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">2. Indexing</h2>
+		<p style="font-size: 16px">
+			Indexes at the back of a book help you quickly find specific information without having to go through every
+			page.
+		</p>
+		<p style="font-size: 16px">
+			In the same way, <strong>database indexes</strong> help find data much faster without scanning every single
+			row in a table.
+		</p>
+		<p style="font-size: 16px">
+			Indexes are usually created on <strong>most frequently queried columns</strong> to make read requests
+			faster, but over-indexing can slow down the write performance due to overhead.
+		</p>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">3. Sharding</h2>
-				<p style="font-size: 16px">
-					A single machine can only hold so much data. It will run out of space and slow down as more people
-					start using your application.
-				</p>
-				<p style="font-size: 16px">
-					To avoid this, you can split the data into <strong>smaller pieces (shards)</strong> and store them
-					on different servers.
-				</p>
-				<p style="font-size: 16px">This process is called <strong>Database Sharding.</strong></p>
-				<img
-					src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbb460340-10c4-4b20-9a66-e05050bf8195_1942x808.png"
-					alt="Database Sharding"
-					style="max-width: 100%; height: auto; margin-top: 20px"
-				/>
-				<p style="font-size: 16px">
-					Distributing data in this way makes it easier to scale and handle more users.
-				</p>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">3. Sharding</h2>
+		<p style="font-size: 16px">
+			A single machine can only hold so much data. It will run out of space and slow down as more people start
+			using your application.
+		</p>
+		<p style="font-size: 16px">
+			To avoid this, you can split the data into <strong>smaller pieces (shards)</strong> and store them on
+			different servers.
+		</p>
+		<p style="font-size: 16px">This process is called <strong>Database Sharding.</strong></p>
+		<img
+			src="assets/scaling_database/database-sharding.png"
+			alt="Database Sharding"
+			style="max-width: 100%; height: auto; margin-top: 20px"
+		/>
+		<p style="font-size: 16px">Distributing data in this way makes it easier to scale and handle more users.</p>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">
-					4. Vertical Partitioning
-				</h2>
-				<p style="font-size: 16px">
-					In situations where some columns are accessed more often than others, it's a good idea to split the
-					database table into smaller tables, each containing a subset of the columns from the original table.
-				</p>
-				<p style="font-size: 16px">
-					This helps reduce the amount of data read during queries and can improve performance for specific
-					access patterns.
-				</p>
-				<p style="font-size: 16px">
-					<strong>Example:</strong> An e-commerce application might split their product table into:
-				</p>
-				<ul style="font-size: 16px">
-					<li>A "core_product" table with frequently accessed data (ID, name, price, category)</li>
-					<li>A "product_details" table with less frequently accessed data (description, specifications)</li>
-					<li>A "product_media" table with large binary data (images, videos)</li>
-				</ul>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">4. Vertical Partitioning</h2>
+		<p style="font-size: 16px">
+			In situations where some columns are accessed more often than others, it's a good idea to split the database
+			table into smaller tables, each containing a subset of the columns from the original table.
+		</p>
+		<p style="font-size: 16px">
+			This helps reduce the amount of data read during queries and can improve performance for specific access
+			patterns.
+		</p>
+		<p style="font-size: 16px">
+			<strong>Example:</strong> An e-commerce application might split their product table into:
+		</p>
+		<ul style="font-size: 16px">
+			<li>A "core_product" table with frequently accessed data (ID, name, price, category)</li>
+			<li>A "product_details" table with less frequently accessed data (description, specifications)</li>
+			<li>A "product_media" table with large binary data (images, videos)</li>
+		</ul>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">5. Caching</h2>
-				<p style="font-size: 16px">
-					In almost every major application, some data is accessed more often than others.
-				</p>
-				<p style="font-size: 16px">For example:</p>
-				<ul style="font-size: 16px">
-					<li>In a blogging app, some articles are read more often than others.</li>
-					<li>In a social media app, some users use the platform more often than others.</li>
-					<li>In a streaming platform, some movies are watched more often than others.</li>
-				</ul>
-				<p style="font-size: 16px">
-					It's smart to store this frequently accessed data in a <strong>faster storage layer</strong> to
-					speed up access and reduce the load on the database.
-				</p>
-				<img
-					src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe67545ea-d65f-48e1-a5fc-fc5fdce18292_1446x938.png"
-					alt="Caching"
-					style="max-width: 100%; height: auto; margin-top: 20px"
-				/>
-				<p style="font-size: 16px">
-					This is referred to as <strong>caching</strong> and it's a popular choice to speed up queries for
-					frequently accessed data.
-				</p>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">5. Caching</h2>
+		<p style="font-size: 16px">In almost every major application, some data is accessed more often than others.</p>
+		<p style="font-size: 16px">For example:</p>
+		<ul style="font-size: 16px">
+			<li>In a blogging app, some articles are read more often than others.</li>
+			<li>In a social media app, some users use the platform more often than others.</li>
+			<li>In a streaming platform, some movies are watched more often than others.</li>
+		</ul>
+		<p style="font-size: 16px">
+			It's smart to store this frequently accessed data in a <strong>faster storage layer</strong> to speed up
+			access and reduce the load on the database.
+		</p>
+		<img
+			src="assets/scaling_database/cache.webp"
+			alt="Caching"
+			style="max-width: 100%; height: auto; margin-top: 20px"
+		/>
+		<p style="font-size: 16px">
+			This is referred to as <strong>caching</strong> and it's a popular choice to speed up queries for frequently
+			accessed data.
+		</p>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">6. Replication</h2>
-				<p style="font-size: 16px">
-					If your database servers are only located in one region, users from other regions may experience a
-					higher latency.
-				</p>
-				<p style="font-size: 16px">
-					To fix this, we can replicate the primary database to other regions and handle
-					<strong>read requests</strong> locally.
-				</p>
-				<p style="font-size: 16px">This process is called <strong>Database Replication.</strong></p>
-				<p style="font-size: 16px">
-					Simply put, database replication involves creating and maintaining multiple copies (replicas) of a
-					database across different servers or locations to improve read performance, ensure high
-					availability, and disaster recovery.
-				</p>
-				<p style="font-size: 16px">
-					These replicas are synchronized with the original database (the primary), ensuring data consistency.
-				</p>
-				<img
-					src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F869bf5de-804b-4280-a0b9-f32cc5caf925_1208x1120.png"
-					alt="Database Replication"
-					style="max-width: 100%; height: auto; margin-top: 20px"
-				/>
-				<p style="font-size: 16px"><strong>Types of Replication</strong>:</p>
-				<ol style="font-size: 16px">
-					<li>
-						<strong>Synchronous Replication:</strong> Changes made to the primary database are immediately
-						replicated to all replicas before the transaction is considered complete. This ensures strong
-						data consistency but can impact performance due to the additional overhead.
-					</li>
-					<li>
-						<strong>Asynchronous Replication:</strong> Changes to the primary database are replicated to
-						replicas with a slight delay. This offers better performance but with the trade-off of potential
-						data inconsistency between the primary and replicas (known as replication lag).
-					</li>
-				</ol>
-			</section>
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">6. Replication</h2>
+		<p style="font-size: 16px">
+			If your database servers are only located in one region, users from other regions may experience a higher
+			latency.
+		</p>
+		<p style="font-size: 16px">
+			To fix this, we can replicate the primary database to other regions and handle
+			<strong>read requests</strong> locally.
+		</p>
+		<p style="font-size: 16px">This process is called <strong>Database Replication.</strong></p>
+		<p style="font-size: 16px">
+			Simply put, database replication involves creating and maintaining multiple copies (replicas) of a database
+			across different servers or locations to improve read performance, ensure high availability, and disaster
+			recovery.
+		</p>
+		<p style="font-size: 16px">
+			These replicas are synchronized with the original database (the primary), ensuring data consistency.
+		</p>
+		<img
+			src="assets/scaling_database/database-replication.jpg"
+			alt="Database Replication"
+			style="max-width: 100%; height: auto; margin-top: 20px"
+		/>
+		<p style="font-size: 16px"><strong>Types of Replication</strong>:</p>
+		<ol style="font-size: 16px">
+			<li>
+				<strong>Synchronous Replication:</strong> Changes made to the primary database are immediately
+				replicated to all replicas before the transaction is considered complete. This ensures strong data
+				consistency but can impact performance due to the additional overhead.
+			</li>
+			<li>
+				<strong>Asynchronous Replication:</strong> Changes to the primary database are replicated to replicas
+				with a slight delay. This offers better performance but with the trade-off of potential data
+				inconsistency between the primary and replicas (known as replication lag).
+			</li>
+		</ol>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">
-					7. Materialized Views
-				</h2>
-				<p style="font-size: 16px">
-					Some database queries are complex and can take a long time to run. This can slow down the
-					performance of the application if these queries are run often.
-				</p>
-				<p style="font-size: 16px">
-					But, what if we pre-compute and store the results of these complex and frequent queries?
-				</p>
-				<p style="font-size: 16px">This is the idea behind <strong>Materialized Views.</strong></p>
-				<p style="font-size: 16px">
-					Materialized views are <strong>pre-computed, disk-stored</strong> result sets of complex queries.
-				</p>
-				<p style="font-size: 16px">
-					Unlike regular views, which are virtual and computed on-the-fly, materialized views physically store
-					the results, making them readily available for fast retrieval.
-				</p>
-				<p style="font-size: 16px">
-					It significantly improves the query performance for <strong>complex</strong> and
-					<strong>resource-intensive</strong> operations.
-				</p>
-				<h4 style="color: #2c3e50"><strong>Example:</strong></h4>
-				<p style="font-size: 16px">
-					An e-commerce platform needs to generate daily sales reports that aggregate sales data by
-					<strong>date</strong> and <strong>product</strong>. These reports are accessed frequently by the
-					management team to make business decisions.
-				</p>
-				<p style="font-size: 16px"><strong>Create Materialized View:</strong></p>
-				<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">7. Materialized Views</h2>
+		<p style="font-size: 16px">
+			Some database queries are complex and can take a long time to run. This can slow down the performance of the
+			application if these queries are run often.
+		</p>
+		<p style="font-size: 16px">
+			But, what if we pre-compute and store the results of these complex and frequent queries?
+		</p>
+		<p style="font-size: 16px">This is the idea behind <strong>Materialized Views.</strong></p>
+		<p style="font-size: 16px">
+			Materialized views are <strong>pre-computed, disk-stored</strong> result sets of complex queries.
+		</p>
+		<p style="font-size: 16px">
+			Unlike regular views, which are virtual and computed on-the-fly, materialized views physically store the
+			results, making them readily available for fast retrieval.
+		</p>
+		<p style="font-size: 16px">
+			It significantly improves the query performance for <strong>complex</strong> and
+			<strong>resource-intensive</strong> operations.
+		</p>
+		<h4 style="color: #2c3e50"><strong>Example:</strong></h4>
+		<p style="font-size: 16px">
+			An e-commerce platform needs to generate daily sales reports that aggregate sales data by
+			<strong>date</strong> and <strong>product</strong>. These reports are accessed frequently by the management
+			team to make business decisions.
+		</p>
+		<p style="font-size: 16px"><strong>Create Materialized View:</strong></p>
+		<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
 <code style="font-family: 'Courier New', Courier, monospace;">CREATE MATERIALIZED VIEW <strong>daily_sales_summary</strong> AS
 SELECT date, product_id, SUM(quantity) AS total_quantity, SUM(amount) AS total_amount
 FROM sales
 GROUP BY date, product_id;</code>
             </pre>
-				<p style="font-size: 16px"><strong>Schedule Refresh:</strong></p>
-				<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
+		<p style="font-size: 16px"><strong>Schedule Refresh:</strong></p>
+		<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
 <code style="font-family: 'Courier New', Courier, monospace;">CREATE OR REPLACE SCHEDULE <strong>job_refresh_sales_summary</strong>
 ON SCHEDULE EVERY 1 DAY
 STARTS '2024-07-03 00:00:00'
 DO
     REFRESH MATERIALIZED VIEW daily_sales_summary;</code>
             </pre>
-			</section>
+	</section>
 
-			<section style="margin-bottom: 40px">
-				<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">
-					8. Data Denormalization
-				</h2>
-				<p style="font-size: 16px">
-					Some database queries may involve <strong>multiple tables</strong> and
-					<strong>complex joins</strong>. These queries are often slow and can make the application slower for
-					large tables.
-				</p>
-				<p style="font-size: 16px">
-					To avoid this, we can add redundancy by combining <strong>multiple tables into one</strong> to
-					reduce the need for complex joins. This is called <strong>Data denormalization.</strong>
-				</p>
-				<p style="font-size: 16px">
-					It is the process of intentionally introducing redundancy into a database to optimize read
-					performance by combining tables or adding redundant data.
-				</p>
-				<h4 style="color: #2c3e50"><strong>Example:</strong></h4>
-				<p style="font-size: 16px">
-					A social media platform has a normalized database schema with separate tables for
-					<strong>users</strong>, <strong>posts</strong>, <strong>comments</strong>, and
-					<strong>likes</strong>.
-				</p>
-				<p style="font-size: 16px"><strong>Normalized Schema:</strong></p>
-				<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
+	<section style="margin-bottom: 40px">
+		<h2 style="color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px">8. Data Denormalization</h2>
+		<p style="font-size: 16px">
+			Some database queries may involve <strong>multiple tables</strong> and <strong>complex joins</strong>. These
+			queries are often slow and can make the application slower for large tables.
+		</p>
+		<p style="font-size: 16px">
+			To avoid this, we can add redundancy by combining <strong>multiple tables into one</strong> to reduce the
+			need for complex joins. This is called <strong>Data denormalization.</strong>
+		</p>
+		<p style="font-size: 16px">
+			It is the process of intentionally introducing redundancy into a database to optimize read performance by
+			combining tables or adding redundant data.
+		</p>
+		<h4 style="color: #2c3e50"><strong>Example:</strong></h4>
+		<p style="font-size: 16px">
+			A social media platform has a normalized database schema with separate tables for
+			<strong>users</strong>, <strong>posts</strong>, <strong>comments</strong>, and <strong>likes</strong>.
+		</p>
+		<p style="font-size: 16px"><strong>Normalized Schema:</strong></p>
+		<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
 <code style="font-family: 'Courier New', Courier, monospace;">CREATE TABLE <strong>users</strong> (
     user_id INT PRIMARY KEY,
     username VARCHAR(100),
@@ -285,13 +247,13 @@ CREATE TABLE <strong>comments</strong> (
     FOREIGN KEY (user_id) REFERENCES users(user_id) );
 </code>
 </pre>
-				<p style="font-size: 16px">
-					The platform experiences high read traffic for user profiles and their associated posts and comments
-					so it store posts and comments as JSON arrays within the <code>user_profiles</code> table.
-				</p>
+		<p style="font-size: 16px">
+			The platform experiences high read traffic for user profiles and their associated posts and comments so it
+			store posts and comments as JSON arrays within the <code>user_profiles</code> table.
+		</p>
 
-				<p style="font-size: 16px"><strong>Denormalized Schema:</strong></p>
-				<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
+		<p style="font-size: 16px"><strong>Denormalized Schema:</strong></p>
+		<pre style="background-color: #f8f8f8; padding: 15px; border-radius: 5px; overflow-x: auto">
 <code style="font-family: 'Courier New', Courier, monospace;">CREATE TABLE <strong>users_profiles</strong> (
     user_id INT PRIMARY KEY,
     username VARCHAR(100),
@@ -301,15 +263,12 @@ CREATE TABLE <strong>comments</strong> (
 );
 </code>
 </pre>
-				<p style="font-size: 16px">
-					Each of these strategies has its own trade-offs in terms of complexity, consistency, and
-					performance.
-				</p>
-				<p style="font-size: 16px">
-					The best approach often involves a combination of these techniques, tailored to the specific needs
-					and constraints of your application.
-				</p>
-			</section>
-		</main>
-	</body>
-</html>
+		<p style="font-size: 16px">
+			Each of these strategies has its own trade-offs in terms of complexity, consistency, and performance.
+		</p>
+		<p style="font-size: 16px">
+			The best approach often involves a combination of these techniques, tailored to the specific needs and
+			constraints of your application.
+		</p>
+	</section>
+</main>
