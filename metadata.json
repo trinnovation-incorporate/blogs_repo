@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"message_queue_vs_pub_sub": {
+			"title": "Message Queue vs Pub-Sub",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "04 Oct, 2024",
+			"tags": ["Message Queue", "PUB/SUB", "RabbitMQ", "Kafka"],
+			"category": "Tech",
+			"summary": " Understanding the key differences between these two can prove crucial for effective software development.",
+			"content_url": "blogs/message_queue_vs_pub_sub.html",
+			"display_image": "display/message_queue_vs_pub_sub.png"
+		},
 		"multithreading": {
 			"title": "Multithreading: Maximizing Efficiency in Modern Computing",
 			"author_name": "Trinc Academy",
