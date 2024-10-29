@@ -1,0 +1,200 @@
+<!-- Header Section -->
+<header style="text-align: center; padding: 20px; background-color: #4b89f7">
+	<h1 style="color: #fff; font-size: 2rem; margin: 0">HTTP Request Methods: A Guide to REST API Communication</h1>
+	<p style="color: #fff; font-size: 1.2rem; margin: 5px 0">Understanding the essentials of REST API HTTP methods</p>
+</header>
+
+<!-- Introduction -->
+<section style="padding: 20px; max-width: 800px; margin: auto">
+	<p style="color: #333; font-size: 1rem; text-align: justify">
+		When working with REST APIs, HTTP methods are the fundamental building blocks that define how data is exchanged
+		between a client and a server. Each method has a unique purpose, helping to streamline operations like data
+		retrieval, creation, updates, and deletion. Here, we’ll explore the primary HTTP request methods and their roles
+		in RESTful communication.
+	</p>
+</section>
+
+<!-- HTTP Methods Section -->
+<div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px">
+	<!-- GET Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #e8f1ff;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #4b89f7; font-size: 1.5rem">GET</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>GET /api/customers</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			The GET method is used to retrieve data from the server without modifying it. It’s ideal for fetching data,
+			like loading a list of products or user details, without making any changes to the backend.
+		</p>
+	</div>
+
+	<!-- POST Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #fbe4ff;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #b44dff; font-size: 1.5rem">POST</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>POST /api/customers</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			Used to send data to the server to create a new resource. This is useful for operations like adding a new
+			user or product, where the data is included in the request body.
+		</p>
+	</div>
+
+	<!-- PUT Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #e0ffe0;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #4caf50; font-size: 1.5rem">PUT</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>PUT /api/customers/123</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			PUT is used to update an existing resource completely. For example, updating a user profile with new
+			information.
+		</p>
+	</div>
+
+	<!-- PATCH Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #ffe8e8;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #ff3d3d; font-size: 1.5rem">PATCH</h2>
+		<p style="font-size: 0.95rem">
+			<strong>Example:</strong> <code>PATCH /api/customers/1234 {"name": "foobar"}</code>
+		</p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			PATCH allows partial updates to resources, only changing specified fields. Ideal for minor updates, like
+			modifying a single field in a record.
+		</p>
+	</div>
+
+	<!-- DELETE Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #fff5e6;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #ff9900; font-size: 1.5rem">DELETE</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>DELETE /api/customers/235</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			DELETE removes a resource from the server. Once deleted, the resource is no longer accessible, which makes
+			it useful for operations like account deletions.
+		</p>
+	</div>
+
+	<!-- HEAD Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #e8f1ff;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #4b89f7; font-size: 1.5rem">HEAD</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>HEAD /api/customers</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			HEAD functions similarly to GET but only fetches metadata. It’s useful for checking resource availability
+			without loading the actual data.
+		</p>
+	</div>
+
+	<!-- OPTIONS Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #e8e8ff;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #a0a0ff; font-size: 1.5rem">OPTIONS</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>OPTIONS /api/main.html/1.1</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			OPTIONS provides information about the communication options for a specific URL or server, listing allowed
+			methods like GET, POST, etc.
+		</p>
+	</div>
+
+	<!-- TRACE Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #ffe6e6;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #f54242; font-size: 1.5rem">TRACE</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>TRACE /api/main.html</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			TRACE is used for diagnostics, echoing the received request to see if intermediaries have modified it.
+			Primarily used in debugging.
+		</p>
+	</div>
+
+	<!-- CONNECT Method -->
+	<div
+		style="
+			width: 100%;
+			max-width: 300px;
+			margin: 10px;
+			padding: 20px;
+			background-color: #e8f1ff;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		"
+	>
+		<h2 style="color: #2b98ff; font-size: 1.5rem">CONNECT</h2>
+		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>CONNECT www.example.com:433 HTTP/1.1</code></p>
+		<p style="font-size: 0.95rem; text-align: justify">
+			CONNECT establishes a tunnel between the client and server for secure communication. It’s often used in
+			HTTPS connections.
+		</p>
+	</div>
+</div>

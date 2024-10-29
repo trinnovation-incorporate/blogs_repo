@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"http_request_methods": {
+			"title": "HTTP Request Methods: A Guide to REST API Communication",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "29 Oct, 2024",
+			"tags": ["HTTP", "Headers", "API", "Request"],
+			"category": "Tech",
+			"summary": "When working with REST APIs, HTTP methods are the fundamental building blocks that define how data is exchanged between a client and server.",
+			"content_url": "blogs/http_request_methods.html",
+			"display_image": "display/http_request_methods.png"
+		},
 		"message_queue_vs_pub_sub": {
 			"title": "Message Queue vs Pub-Sub",
 			"author_name": "Trinc Academy",
@@ -7,7 +18,7 @@
 			"date": "04 Oct, 2024",
 			"tags": ["Message Queue", "PUB/SUB", "RabbitMQ", "Kafka"],
 			"category": "Tech",
-			"summary": " Understanding the key differences between these two can prove crucial for effective software development.",
+			"summary": "Understanding the key differences between these two can prove crucial for effective software development.",
 			"content_url": "blogs/message_queue_vs_pub_sub.html",
 			"display_image": "display/message_queue_vs_pub_sub.png"
 		},
