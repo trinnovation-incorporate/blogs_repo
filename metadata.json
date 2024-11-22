@@ -9,7 +9,7 @@
 			"category": "Tech",
 			"summary": "Blockchain technology has emerged as a groundbreaking innovation with the potential to transform industries and redefine how digital transactions and records are handled.",
 			"content_url": "blogs/intro_to_blockchain_technology.html",
-			"display_image": "display/intro_to_blockchain_technology.png"
+			"display_image": "display/intro_to_blockchain_technology.webp"
 		},
 		"http_request_methods": {
 			"title": "HTTP Request Methods: A Guide to REST API Communication",
