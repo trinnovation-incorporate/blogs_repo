@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"understanding_saas_and_paas_models": {
+			"title": "A Guide to Understanding SaaS and PaaS Models",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["SaaS", "PaaS", "Models"],
+			"category": "Tech",
+			"summary": "SaaS refers to software applications that are hosted and managed by a third-party provider, accessible via the internet, and typically offered on a subscription basis.",
+			"content_url": "blogs/understanding_saas_and_paas_models.html",
+			"display_image": "display/understanding_saas_and_paas_models.jpg"
+		},
 		"future_of_quantum_computing": {
 			"title": "Quantum Computing: What It Means for the Future",
 			"author_name": "Trinc Academy",
