@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"5g_changing_technology_landscape": {
+			"title": "How 5G is Changing the Technology Landscape",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["5G", "Network"],
+			"category": "Tech",
+			"summary": "The telecommunications sector has long been the backbone of mobile technology. With the deployment of 5G, the capacity and speed of mobile networks will increase exponentially.",
+			"content_url": "blogs/5g_changing_technology_landscape.html",
+			"display_image": "display/5g_changing_technology_landscape.webp"
+		},
 		"intro_to_cybersecurity": {
 			"title": "Understanding the Basics of Cybersecurity",
 			"author_name": "Trinc Academy",
@@ -7,7 +18,7 @@
 			"date": "23 Nov, 2024",
 			"tags": ["Cybersecurity", "Technology"],
 			"category": "Tech",
-			"summary": "Blockchain technology has emerged as a groundbreaking innovation with the potential to transform industries and redefine how digital transactions and records are handled.",
+			"summary": "In an era of rapid technological advancement, cybersecurity has become one of the most critical components of the digital landscape.",
 			"content_url": "blogs/intro_to_cybersecurity.html",
 			"display_image": "display/intro_to_cybersecurity.webp"
 		},
