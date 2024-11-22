@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"role_of_devops": {
+			"title": "The Role of DevOps in Modern Software Development",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["DevOps", "Software", "Development"],
+			"category": "Tech",
+			"summary": "In the rapidly evolving landscape of software development, organizations are increasingly adopting practices that enable faster, more reliable software delivery.",
+			"content_url": "blogs/role_of_devops.html",
+			"display_image": "display/role_of_devops.jpeg"
+		},
 		"5g_changing_technology_landscape": {
 			"title": "How 5G is Changing the Technology Landscape",
 			"author_name": "Trinc Academy",
