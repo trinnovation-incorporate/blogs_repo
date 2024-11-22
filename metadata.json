@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"future_of_quantum_computing": {
+			"title": "Quantum Computing: What It Means for the Future",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["Quantum", "Computing", "Future"],
+			"category": "Tech",
+			"summary": "Quantum computing, once the realm of theoretical physics, is quickly moving toward the mainstream.",
+			"content_url": "blogs/future_of_quantum_computing.html",
+			"display_image": "display/future_of_quantum_computing.png"
+		},
 		"role_of_devops": {
 			"title": "The Role of DevOps in Modern Software Development",
 			"author_name": "Trinc Academy",
