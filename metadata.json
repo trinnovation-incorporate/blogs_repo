@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"intro_to_blockchain_technology": {
+			"title": "Introduction to Blockchain Technology and Its Applications",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["Blockchain", "Technology", "Ledger", "Smart Contract"],
+			"category": "Tech",
+			"summary": "Blockchain technology has emerged as a groundbreaking innovation with the potential to transform industries and redefine how digital transactions and records are handled.",
+			"content_url": "blogs/intro_to_blockchain_technology.html",
+			"display_image": "display/intro_to_blockchain_technology.png"
+		},
 		"http_request_methods": {
 			"title": "HTTP Request Methods: A Guide to REST API Communication",
 			"author_name": "Trinc Academy",
