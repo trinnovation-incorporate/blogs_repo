@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"intro_to_kubernetes": {
+			"title": "Introduction to Kubernetes for Beginners",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["Kubernetes", "DevOps", "Cloud Hosting"],
+			"category": "Tech",
+			"summary": " Kubernetes, often referred to as K8s, is an open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.",
+			"content_url": "blogs/intro_to_kubernetes.html",
+			"display_image": "display/intro_to_kubernetes.jpg"
+		},
 		"understanding_saas_and_paas_models": {
 			"title": "A Guide to Understanding SaaS and PaaS Models",
 			"author_name": "Trinc Academy",
