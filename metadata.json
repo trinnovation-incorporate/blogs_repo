@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"microservices_architechture": {
+			"title": "Microservices Architecture in Software Development",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "23 Nov, 2024",
+			"tags": ["Microservices", "Architecture", "Software"],
+			"category": "Tech",
+			"summary": "In the ever-evolving world of software development, businesses are constantly seeking methodologies and technologies that foster scalability, flexibility, and resilience.",
+			"content_url": "blogs/microservices_architechture.html",
+			"display_image": "display/microservices_architechture.jpg"
+		},
 		"intro_to_kubernetes": {
 			"title": "Introduction to Kubernetes for Beginners",
 			"author_name": "Trinc Academy",
