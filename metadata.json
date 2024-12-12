@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"textile_sustainability": {
+			"title": "Sustainability Through Textile Innovations",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Sustainability", "Textile", "Innovations"],
+			"category": "Fashion",
+			"summary": "In recent years, sustainability has emerged as one of the most pressing concerns across industries, and the textile sector is no exception.",
+			"content_url": "blogs/textile_sustainability.html",
+			"display_image": "display/textile_sustainability.jpg"
+		},
 		"sustainable_fashion_industry": {
 			"title": "Sustainable Fashion: Shaping a Greener, More Ethical Future for the Fashion Industry",
 			"author_name": "Trinc Academy",
