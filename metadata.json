@@ -1,5 +1,27 @@
 {
 	"blogs": {
+		"quantum_computing_applications": {
+			"title": "Quantum Computing and Its Applications",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Quantum Computing", "Applications", "Future"],
+			"category": "Tech",
+			"summary": "Quantum computing is one of the most transformative technological advancements of the 21st century, offering a revolutionary approach to solving complex problems that are beyond the reach of classical computers.",
+			"content_url": "blogs/quantum_computing_applications.html",
+			"display_image": "display/quantum_computing_applications.webp"
+		},
+		"ai_ml_advancements": {
+			"title": "Artificial Intelligence and Machine Learning Advancements",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Artificial Intelligence", "Machine Learning", "Future"],
+			"category": "Tech",
+			"summary": "Artificial Intelligence (AI) and Machine Learning (ML) have significantly reshaped the landscape of technology and innovation.",
+			"content_url": "blogs/ai_ml_advancements.html",
+			"display_image": "display/ai_ml_advancements.webp"
+		},
 		"microservices_architechture": {
 			"title": "Microservices Architecture in Software Development",
 			"author_name": "Trinc Academy",
