@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"smart_fabric_tech": {
+			"title": "Smart Fabrics and Wearable Tech: The Future of Fashion and Functionality",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Smart Fabrics", "Wearable", "Tech"],
+			"category": "Fashion",
+			"summary": "The intersection of fashion and technology has given rise to a new wave of innovations that have the potential to revolutionize how we interact with our clothing and accessories.",
+			"content_url": "blogs/smart_fabric_tech.html",
+			"display_image": "display/smart_fabric_tech.jpeg"
+		},
 		"textile_sustainability": {
 			"title": "Sustainability Through Textile Innovations",
 			"author_name": "Trinc Academy",
