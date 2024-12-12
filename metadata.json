@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"3d_printing_fashion": {
+			"title": "3D Printing in Fashion: A Revolutionary Shift in the Industry",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["3D", "Printing", "Fashion", "Fashion Industry"],
+			"category": "Fashion",
+			"summary": "3D printing, also known as additive manufacturing, has revolutionized numerous industries—from healthcare and automotive to architecture and food. But one area where its impact is increasingly profound is the fashion industry.",
+			"content_url": "blogs/3d_printing_fashion.html",
+			"display_image": "display/3d_printing_fashion.png"
+		},
 		"ai_fashion_design": {
 			"title": "AI-Driven Design and Personalization: Transforming the Fashion Industry",
 			"author_name": "Trinc Academy",
