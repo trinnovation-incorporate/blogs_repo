@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"space_travel_civilization": {
+			"title": "The Evolution of Space Exploration and Colonization: A Journey Through Time",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Evolution", "Space Exploration", "Colonization"],
+			"category": "Tech",
+			"summary": "The launch of Sputnik 1 by the Soviet Union on October 4, 1957, marked the beginning of the Space Age.",
+			"content_url": "blogs/space_travel_civilization.html",
+			"display_image": "display/space_travel_civilization.png"
+		},
 		"web3_decentralization": {
 			"title": "The Rise of Web3 and Decentralized Technologies",
 			"author_name": "Trinc Academy",
