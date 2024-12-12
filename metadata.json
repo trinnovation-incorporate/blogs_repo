@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"3d_design_digital_fashion": {
+			"title": "3D Design and Digital Fashion: Redefining Creativity and Sustainability",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["3D", "Design", "Digital", "Creativity"],
+			"category": "Fashion",
+			"summary": "The convergence of 3D design and digital fashion is reshaping the landscape of the fashion industry.",
+			"content_url": "blogs/3d_design_digital_fashion.html",
+			"display_image": "display/3d_design_digital_fashion.png"
+		},
 		"3d_printing_fashion": {
 			"title": "3D Printing in Fashion: A Revolutionary Shift in the Industry",
 			"author_name": "Trinc Academy",
