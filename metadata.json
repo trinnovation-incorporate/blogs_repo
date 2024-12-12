@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"digital_fashion_exploration": {
+			"title": "Digital Fashion: A Comprehensive Exploration",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Digital Fashion", "Exploration", "Fashion", "Art"],
+			"category": "Fashion",
+			"summary": "The fashion industry is undergoing a profound transformation, largely driven by technological advancements.",
+			"content_url": "blogs/digital_fashion_exploration.html",
+			"display_image": "display/digital_fashion_exploration.png"
+		},
 		"gautam_adani_journey": {
 			"title": "Adani's Ascent: From Gujarat's Streets to Global Dominance",
 			"author_name": "Trinc Academy",
