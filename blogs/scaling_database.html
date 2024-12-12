@@ -1,21 +1,79 @@
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
 <main>
-	<p style="font-size: 18px; margin-bottom: 20px">
+	<p>
 		Imagine you are developing an application that requires storing <strong>user information</strong>. When your
 		application has only a few hundred users, it’s manageable to keep all the data on a single database server.
 	</p>
 
-	<p style="font-size: 18px; margin-bottom: 20px">
+	<p>
 		However, as your application expands and you gain more users, the need for
 		<strong>additional data storage</strong> becomes crucial. Failing to scale your database to meet the increased
 		demand could <strong>slow down</strong> your application and lead to various issues.
 	</p>
 
-	<p style="font-size: 18px; margin-bottom: 30px">
+	<p>
 		In this article, we will discuss <strong>8 strategies</strong> for scaling databases to ensure your application
 		maintains optimal performance, preventing the database from becoming a bottleneck.
 	</p>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -27,29 +85,25 @@
 		>
 			1. Vertical Scaling
 		</h2>
-		<img
-			src="assets/scaling_database/vertical-scaling.webp"
-			alt="Vertical Scaling"
-			style="max-width: 100%; height: auto; margin-bottom: 20px"
-		/>
-		<p style="font-size: 16px">
+		<img src="assets/scaling_database/vertical-scaling.webp" alt="Vertical Scaling" />
+		<p>
 			Vertical scaling means adding more resources (such as CPU, RAM, and storage) to a single database server.
 			This approach can be a quick and straightforward solution for a <strong>smaller database</strong>, but it
 			comes with its own limitations.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			It can quickly become <strong>costly</strong>, and there are limits to how much you can scale up. Moreover,
 			vertical scaling introduces a <strong>single point of failure</strong>, meaning that if this server goes
 			down, your entire application could be affected.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			<strong>Example:</strong> A small e-commerce website might face increased traffic during holiday sales. To
 			handle this surge, they could vertically scale their database server by adding more RAM to manage the extra
 			load.
 		</p>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -61,19 +115,19 @@
 		>
 			2. Indexing
 		</h2>
-		<p style="font-size: 16px">
+		<p>
 			Just like the index at the back of a book helps you quickly find specific information,
 			<strong>database indexes</strong> allow you to locate data rapidly without scanning every single row in a
 			table.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			Indexes are typically created on the <strong>most frequently queried columns</strong> to enhance read
 			performance. However, it’s essential to note that over-indexing may degrade write performance due to
 			increased overhead.
 		</p>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -85,25 +139,21 @@
 		>
 			3. Sharding
 		</h2>
-		<p style="font-size: 16px">
+		<p>
 			A single machine has its limits when it comes to storing data. As your application attracts more users, you
 			might face space constraints and reduced performance.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			To prevent this issue, you can divide the data into <strong>smaller pieces (shards)</strong> and distribute
 			them across different servers. This technique is known as <strong>Database Sharding</strong>.
 		</p>
-		<img
-			src="assets/scaling_database/database-sharding.png"
-			alt="Database Sharding"
-			style="max-width: 100%; height: auto; margin-top: 20px"
-		/>
-		<p style="font-size: 16px">
+		<img src="assets/scaling_database/database-sharding.png" alt="Database Sharding" />
+		<p>
 			By distributing the data in this manner, it becomes easier to scale and accommodate more users efficiently.
 		</p>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -115,25 +165,23 @@
 		>
 			4. Vertical Partitioning
 		</h2>
-		<p style="font-size: 16px">
+		<p>
 			When certain columns are accessed more frequently than others, it’s beneficial to split the database table
 			into smaller tables, each containing a subset of the columns from the original table.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			This strategy helps minimize the amount of data read during queries, potentially improving performance for
 			specific access patterns.
 		</p>
-		<p style="font-size: 16px">
-			<strong>Example:</strong> An e-commerce application could split its product table into:
-		</p>
-		<ul style="font-size: 16px">
+		<p><strong>Example:</strong> An e-commerce application could split its product table into:</p>
+		<ul>
 			<li>A "core_product" table with frequently accessed data (ID, name, price, category).</li>
 			<li>A "product_details" table with less frequently accessed data (description, specifications).</li>
 			<li>A "product_media" table for large binary data (images, videos).</li>
 		</ul>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -145,31 +193,25 @@
 		>
 			5. Caching
 		</h2>
-		<p style="font-size: 16px">
-			In nearly all major applications, certain data is accessed more frequently than others.
-		</p>
-		<p style="font-size: 16px">For instance:</p>
-		<ul style="font-size: 16px">
+		<p>In nearly all major applications, certain data is accessed more frequently than others.</p>
+		<p>For instance:</p>
+		<ul>
 			<li>In a blogging app, some articles are read more frequently than others.</li>
 			<li>In a social media platform, specific users may be more active.</li>
 			<li>In a streaming service, some movies are more popular than others.</li>
 		</ul>
-		<p style="font-size: 16px">
+		<p>
 			It’s wise to store this frequently accessed data in a <strong>faster storage layer</strong>, enhancing
 			access speed and alleviating the load on the database.
 		</p>
-		<img
-			src="assets/scaling_database/cache.webp"
-			alt="Caching"
-			style="max-width: 100%; height: auto; margin-top: 20px"
-		/>
-		<p style="font-size: 16px">
+		<img src="assets/scaling_database/cache.webp" alt="Caching" />
+		<p>
 			This method is known as <strong>caching</strong>, a widely used technique to expedite queries for
 			often-accessed data.
 		</p>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -181,32 +223,26 @@
 		>
 			6. Replication
 		</h2>
-		<p style="font-size: 16px">
+		<p>
 			When your database servers are confined to one region, users from other areas may encounter increased
 			latency.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			To address this issue, we can replicate the primary database across various regions and manage
 			<strong>read requests</strong> locally.
 		</p>
-		<p style="font-size: 16px">This approach is termed <strong>Database Replication</strong>.</p>
-		<p style="font-size: 16px">
+		<p>This approach is termed <strong>Database Replication</strong>.</p>
+		<p>
 			Essentially, database replication involves creating and maintaining multiple copies (replicas) of a database
 			across different servers or locations to enhance read performance, ensure high availability, and facilitate
 			disaster recovery.
 		</p>
-		<p style="font-size: 16px">
-			These replicas are synchronized with the primary database, ensuring data consistency.
-		</p>
-		<img
-			src="assets/scaling_database/database-replication.jpg"
-			alt="Database Replication"
-			style="max-width: 100%; height: auto; margin-top: 20px"
-		/>
-		<p style="font-size: 16px">
+		<p>These replicas are synchronized with the primary database, ensuring data consistency.</p>
+		<img src="assets/scaling_database/database-replication.jpg" alt="Database Replication" />
+		<p>
 			<strong>Types of Replication:</strong>
 		</p>
-		<ol style="font-size: 16px">
+		<ol>
 			<li>
 				<strong>Synchronous Replication:</strong> Changes made to the primary database are immediately
 				replicated to all replicas before a transaction is deemed complete. This ensures strong data consistency
@@ -220,7 +256,7 @@
 		</ol>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -232,24 +268,16 @@
 		>
 			7. Load Balancing
 		</h2>
-		<p style="font-size: 16px">
-			Even with scaling strategies in place, a sudden surge in traffic could overload your database servers.
-		</p>
-		<p style="font-size: 16px">
+		<p>Even with scaling strategies in place, a sudden surge in traffic could overload your database servers.</p>
+		<p>
 			To manage this, <strong>load balancing</strong> can be employed to distribute incoming requests across
 			multiple servers, preventing any single server from becoming overwhelmed.
 		</p>
-		<img
-			src="assets/scaling_database/load-balancer.webp"
-			alt="Load Balancer"
-			style="max-width: 100%; height: auto; margin-top: 20px"
-		/>
-		<p style="font-size: 16px">
-			By balancing the load, we can ensure consistent performance, especially during peak usage times.
-		</p>
+		<img src="assets/scaling_database/load-balancer.webp" alt="Load Balancer" />
+		<p>By balancing the load, we can ensure consistent performance, especially during peak usage times.</p>
 	</section>
 
-	<section style="margin-bottom: 40px">
+	<section>
 		<h2
 			style="
 				font-size: 20px;
@@ -261,21 +289,21 @@
 		>
 			8. Data Archiving
 		</h2>
-		<p style="font-size: 16px">
+		<p>
 			As time passes, certain data may become less relevant or infrequently accessed. Keeping this data in your
 			primary database can affect performance and increase storage costs.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			To optimize your database, you can implement a <strong>data archiving strategy</strong>, moving outdated
 			data to a separate storage solution, thus keeping your primary database streamlined and efficient.
 		</p>
-		<p style="font-size: 16px">
+		<p>
 			<strong>Example:</strong> An organization might archive historical records of user interactions after a set
 			period, maintaining only recent activity in the main database for immediate access.
 		</p>
 	</section>
 
-	<p style="font-size: 18px; margin-top: 30px">
+	<p>
 		Implementing these strategies effectively allows you to maintain the performance and availability of your
 		database as your application grows, providing a seamless experience for your users.
 	</p>

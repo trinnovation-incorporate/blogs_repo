@@ -1,6 +1,64 @@
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
 <!-- Introduction -->
-<section style="padding: 20px; margin: auto">
-	<p style="color: #333; font-size: 1rem; text-align: justify">
+<section>
+	<p>
 		When working with REST APIs, HTTP methods are the fundamental building blocks that define how data is exchanged
 		between a client and a server. Each method has a unique purpose, helping to streamline operations like data
 		retrieval, creation, updates, and deletion. Here, we’ll explore the primary HTTP request methods and their roles
@@ -9,7 +67,7 @@
 </section>
 
 <!-- HTTP Methods Section -->
-<div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px">
+<div>
 	<!-- GET Method -->
 	<div
 		style="
@@ -22,9 +80,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #4b89f7; font-size: 1.5rem">GET</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>GET /api/customers</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>GET</h2>
+		<p><strong>Example:</strong> <code>GET /api/customers</code></p>
+		<p>
 			The GET method is used to retrieve data from the server without modifying it. It’s ideal for fetching data,
 			like loading a list of products or user details, without making any changes to the backend.
 		</p>
@@ -42,9 +100,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #b44dff; font-size: 1.5rem">POST</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>POST /api/customers</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>POST</h2>
+		<p><strong>Example:</strong> <code>POST /api/customers</code></p>
+		<p>
 			Used to send data to the server to create a new resource. This is useful for operations like adding a new
 			user or product, where the data is included in the request body.
 		</p>
@@ -62,9 +120,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #4caf50; font-size: 1.5rem">PUT</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>PUT /api/customers/123</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>PUT</h2>
+		<p><strong>Example:</strong> <code>PUT /api/customers/123</code></p>
+		<p>
 			PUT is used to update an existing resource completely. For example, updating a user profile with new
 			information.
 		</p>
@@ -82,11 +140,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #ff3d3d; font-size: 1.5rem">PATCH</h2>
-		<p style="font-size: 0.95rem">
-			<strong>Example:</strong> <code>PATCH /api/customers/1234 {"name": "foobar"}</code>
-		</p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>PATCH</h2>
+		<p><strong>Example:</strong> <code>PATCH /api/customers/1234 {"name": "foobar"}</code></p>
+		<p>
 			PATCH allows partial updates to resources, only changing specified fields. Ideal for minor updates, like
 			modifying a single field in a record.
 		</p>
@@ -104,9 +160,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #ff9900; font-size: 1.5rem">DELETE</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>DELETE /api/customers/235</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>DELETE</h2>
+		<p><strong>Example:</strong> <code>DELETE /api/customers/235</code></p>
+		<p>
 			DELETE removes a resource from the server. Once deleted, the resource is no longer accessible, which makes
 			it useful for operations like account deletions.
 		</p>
@@ -124,9 +180,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #4b89f7; font-size: 1.5rem">HEAD</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>HEAD /api/customers</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>HEAD</h2>
+		<p><strong>Example:</strong> <code>HEAD /api/customers</code></p>
+		<p>
 			HEAD functions similarly to GET but only fetches metadata. It’s useful for checking resource availability
 			without loading the actual data.
 		</p>
@@ -144,9 +200,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #a0a0ff; font-size: 1.5rem">OPTIONS</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>OPTIONS /api/main.html/1.1</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>OPTIONS</h2>
+		<p><strong>Example:</strong> <code>OPTIONS /api/main.html/1.1</code></p>
+		<p>
 			OPTIONS provides information about the communication options for a specific URL or server, listing allowed
 			methods like GET, POST, etc.
 		</p>
@@ -164,9 +220,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #f54242; font-size: 1.5rem">TRACE</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>TRACE /api/main.html</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>TRACE</h2>
+		<p><strong>Example:</strong> <code>TRACE /api/main.html</code></p>
+		<p>
 			TRACE is used for diagnostics, echoing the received request to see if intermediaries have modified it.
 			Primarily used in debugging.
 		</p>
@@ -184,9 +240,9 @@
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		"
 	>
-		<h2 style="color: #2b98ff; font-size: 1.5rem">CONNECT</h2>
-		<p style="font-size: 0.95rem"><strong>Example:</strong> <code>CONNECT www.example.com:433 HTTP/1.1</code></p>
-		<p style="font-size: 0.95rem; text-align: justify">
+		<h2>CONNECT</h2>
+		<p><strong>Example:</strong> <code>CONNECT www.example.com:433 HTTP/1.1</code></p>
+		<p>
 			CONNECT establishes a tunnel between the client and server for secure communication. It’s often used in
 			HTTPS connections.
 		</p>

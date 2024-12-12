@@ -1,80 +1,128 @@
-<p style="margin-bottom: 10px; color: #333">
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<p>
 	The goal of every web developer is to create a product that appeals to a wide range of users. However, this comes
 	with its challenges, chief among them being scalability issues to meet overwhelming user demands. If not addressed,
 	this can result in disarray of communication among services, defeating the measures placed to ensure orderly
 	database transactions. Thankfully, we have message brokers to the rescue.
 </p>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	In this article, we'll highlight the importance of message queuing as a best practice for backend development,
 	relevant use cases and popular message queuing tools, and how to implement message queuing in backend applications.
 	Additionally, we'll cover best practices for using message queues effectively.
 </p>
-<p style="margin-bottom: 10px; color: #333">Here are some prerequisites to follow along with this article:</p>
-<ul style="margin-left: 20px; margin-bottom: 10px">
-	<li style="color: #333">Knowledge of <a href="https://nodejs.org/" style="color: #007bff">Node.js</a></li>
-	<li style="color: #333">Understanding of microservices architecture</li>
+<p>Here are some prerequisites to follow along with this article:</p>
+<ul>
+	<li>Knowledge of <a href="https://nodejs.org/">Node.js</a></li>
+	<li>Understanding of microservices architecture</li>
 </ul>
 
-<h2 style="color: #222; margin-top: 20px; margin-bottom: 10px; font-size: 1.5em">What is Message Queuing?</h2>
-<p style="margin-bottom: 10px; color: #333">
+<h2>What is Message Queuing?</h2>
+<p>
 	In distributed systems, multiple requests and queues can be sent simultaneously. The concept of a message queue
 	enables the storage of messages in an orderly manner, allowing recipients to process them accordingly. This
 	asynchronous operation ensures that the various components of a distributed system function independently,
 	guaranteeing that messages sent to the recipient are eventually attended to, even in the case of system downtime.
 </p>
 
-<h3 style="color: #222; margin-top: 20px; margin-bottom: 5px; font-size: 1.2em">
-	Relevant Use Cases of Message Brokers
-</h3>
-<p style="margin-bottom: 10px; color: #333">Here are some real-life use cases of message brokers:</p>
-<ul style="margin-left: 20px; margin-bottom: 10px">
-	<li style="color: #333">
+<h3>Relevant Use Cases of Message Brokers</h3>
+<p>Here are some real-life use cases of message brokers:</p>
+<ul>
+	<li>
 		Active use in modern fintech applications ensures seamless execution and processing of financial transactions,
 		preventing server overload and transaction errors.
 	</li>
-	<li style="color: #333">
-		Utilized in notification applications, allowing timely reception of notifications sent from other services.
-	</li>
-	<li style="color: #333">
+	<li>Utilized in notification applications, allowing timely reception of notifications sent from other services.</li>
+	<li>
 		Used in financial markets for efficient execution of financial orders. Additional uses can be seen in media
 		streaming and healthcare.
 	</li>
 </ul>
 
-<h2 style="color: #222; margin-top: 20px; margin-bottom: 10px; font-size: 1.5em">
-	Examples of Popular Message Queue Services
-</h2>
-<p style="margin-bottom: 10px; color: #333">
-	A wide range of applications and services offer message queueing features, including:
-</p>
-<ul style="margin-left: 20px; margin-bottom: 10px">
-	<li style="color: #333"><a href="https://www.rabbitmq.com/" style="color: #007bff">RabbitMQ</a></li>
-	<li style="color: #333"><a href="https://kafka.apache.org/" style="color: #007bff">Apache Kafka</a></li>
-	<li style="color: #333"><a href="https://redis.io/" style="color: #007bff">Redis</a></li>
-	<li style="color: #333"><a href="https://aws.amazon.com/sqs/" style="color: #007bff">Amazon SQS</a></li>
-	<li style="color: #333">
-		<a href="https://cloud.google.com/pubsub/docs" style="color: #007bff">Google Cloud Pub/Sub</a>
+<h2>Examples of Popular Message Queue Services</h2>
+<p>A wide range of applications and services offer message queueing features, including:</p>
+<ul>
+	<li><a href="https://www.rabbitmq.com/">RabbitMQ</a></li>
+	<li><a href="https://kafka.apache.org/">Apache Kafka</a></li>
+	<li><a href="https://redis.io/">Redis</a></li>
+	<li><a href="https://aws.amazon.com/sqs/">Amazon SQS</a></li>
+	<li>
+		<a href="https://cloud.google.com/pubsub/docs">Google Cloud Pub/Sub</a>
 	</li>
-	<li style="color: #333"><a href="https://nats.io/" style="color: #007bff">NATS</a></li>
-	<li style="color: #333"><a href="https://pulsar.apache.org/" style="color: #007bff">Pulsar</a></li>
-	<li style="color: #333"><a href="https://www.ibm.com/cloud/mq" style="color: #007bff">IBM MQ</a></li>
+	<li><a href="https://nats.io/">NATS</a></li>
+	<li><a href="https://pulsar.apache.org/">Pulsar</a></li>
+	<li><a href="https://www.ibm.com/cloud/mq">IBM MQ</a></li>
 </ul>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	We'll utilize RabbitMQ as a cloud service application to power our messages due to its popularity and ease of use.
 	For more information, visit the
-	<a href="https://www.cloudamqp.com/docs/index.html" style="color: #007bff">documentation</a>.
+	<a href="https://www.cloudamqp.com/docs/index.html">documentation</a>.
 </p>
 
-<h2 style="color: #222; margin-top: 20px; margin-bottom: 10px; font-size: 1.5em">Demo Project</h2>
-<p style="margin-bottom: 10px; color: #333">
+<h2>Demo Project</h2>
+<p>
 	In this project, we'll use RabbitMQ to build a simple message broker system allowing seamless communication between
 	two Node.js servers. We'll create a message publisher (the sender) and a message consumer (the receiver).
 </p>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	To get started, create two different files and initialize a Node project using
-	<code style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; font-family: monospace"
-		>npm init</code
-	>. Then, install the relevant packages:
+	<code>npm init</code>. Then, install the relevant packages:
 </p>
 <div
 	style="
@@ -87,52 +135,47 @@
 >
 	npm i amqplib
 </div>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	Next, draft the publish function. Initialize
-	<code style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; font-family: monospace"
-		>amqplib</code
-	>
+	<code>amqplib</code>
 	in your project:
 </p>
 <div
-	style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; margin: 5px 0; font-family: monospace;"
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 5px;
+		margin: 5px 0;
+		font-family: monospace;
+	"
 >
 	const amqp = require("amqplib");
 </div>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	Now, set up your RabbitMQ broker, which will manage your messages. You can download RabbitMQ from
-	<a href="https://www.rabbitmq.com/docs/download" style="color: #007bff">here</a>, or use a cloud-based RabbitMQ
-	broker for ease of use. Create an account on
-	<a href="https://www.cloudamqp.com/" style="color: #007bff">CloudAMQP</a> and set up an instance in your region.
+	<a href="https://www.rabbitmq.com/docs/download">here</a>, or use a cloud-based RabbitMQ broker for ease of use.
+	Create an account on <a href="https://www.cloudamqp.com/">CloudAMQP</a> and set up an instance in your region.
 </p>
 
 <p>
-	<img
-		src="assets/implement_message_queue/cloudAmpq.png"
-		alt="CloudAMQP home page"
-		style="max-width: 100%; height: auto; margin: 10px 0"
-	/>
+	<img src="assets/implement_message_queue/cloudAmpq.png" alt="CloudAMQP home page" />
 </p>
 <p>
-	<img
-		src="assets/implement_message_queue/instance.png"
-		alt="Creating a free instance on CloudAMQP"
-		style="max-width: 100%; height: auto; margin: 10px 0"
-	/>
+	<img src="assets/implement_message_queue/instance.png" alt="Creating a free instance on CloudAMQP" />
 </p>
 <p>
-	<img
-		src="assets/implement_message_queue/amqpdets.png"
-		alt="Details of the Free instance created"
-		style="max-width: 100%; height: auto; margin: 10px 0"
-	/>
+	<img src="assets/implement_message_queue/amqpdets.png" alt="Details of the Free instance created" />
 </p>
 
-<p style="margin-bottom: 10px; color: #333">
-	Next, create a message queue for communication. The send function looks like this:
-</p>
+<p>Next, create a message queue for communication. The send function looks like this:</p>
 <div
-	style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; margin: 5px 0; font-family: monospace;"
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 5px;
+		margin: 5px 0;
+		font-family: monospace;
+	"
 >
 	async function sendMessage(msg) {<br />
 	try {<br />
@@ -146,71 +189,80 @@
 	}<br />
 	}
 </div>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	This function establishes a connection and maintains it, creating a communication channel and ensuring that the
 	queue exists or is created.
 </p>
 
-<p style="margin-bottom: 10px; color: #333">The receiver function looks like this:</p>
+<p>The receiver function looks like this:</p>
 <div
-	style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; margin: 5px 0; font-family: monospace;"
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 5px;
+		margin: 5px 0;
+		font-family: monospace;
+	"
 >
 	async function receiveMessage() {<br />
-		try {<br />
-			const connection = await amqp.connect(url);<br />
-			const channel = await connection.createChannel();<br />
-			await channel.assertQueue(queue);<br />
-			channel.consume(queue, (msg) => {<br />
-				console.log("Received message:", msg.content.toString());<br />
-			});<br />
-		}<br />
-		catch (error) {<br />
-			console.error("Error receiving message:", error);<br />
-		}<br />
+	try {<br />
+	const connection = await amqp.connect(url);<br />
+	const channel = await connection.createChannel();<br />
+	await channel.assertQueue(queue);<br />
+	channel.consume(queue, (msg) => {<br />
+	console.log("Received message:", msg.content.toString());<br />
+	});<br />
+	}<br />
+	catch (error) {<br />
+	console.error("Error receiving message:", error);<br />
+	}<br />
 	}
 </div>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	Once you've implemented these functions, run your publisher and receiver to see the magic of message queuing in
 	action. Simply call
-	<code style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; font-family: monospace"
-		>sendMessage("Hello, RabbitMQ!")</code
-	> to send messages and watch your receiver pick them up seamlessly.
+	<code>sendMessage("Hello, RabbitMQ!")</code>
+	to send messages and watch your receiver pick them up seamlessly.
 </p>
-<p style="margin-bottom: 10px; color: #333">
-	Below is the final code snippet for your implementation:
-</p>
+<p>Below is the final code snippet for your implementation:</p>
 <div
-	style="background-color: #f4f4f4; border-left: 4px solid #007bff; padding: 5px; margin: 5px 0; font-family: monospace;"
+	style="
+		background-color: #f4f4f4;
+		border-left: 4px solid #007bff;
+		padding: 5px;
+		margin: 5px 0;
+		font-family: monospace;
+	"
 >
 	const amqp = require("amqplib");<br />
 	const url = "your-rabbitmq-url";<br />
 	const queue = "your-queue-name";<br />
 	async function sendMessage(msg) {<br />
-		try {<br />
-			const connection = await amqp.connect(url);<br />
-			const channel = await connection.createChannel();<br />
-			await channel.assertQueue(queue);<br />
-			await channel.sendToQueue(queue, Buffer.from(msg));<br />
-		}<br />
-		catch (error) {<br />
-			console.error("Error sending message:", error);<br />
-		}<br />
+	try {<br />
+	const connection = await amqp.connect(url);<br />
+	const channel = await connection.createChannel();<br />
+	await channel.assertQueue(queue);<br />
+	await channel.sendToQueue(queue, Buffer.from(msg));<br />
+	}<br />
+	catch (error) {<br />
+	console.error("Error sending message:", error);<br />
+	}<br />
 	}<br />
 	async function receiveMessage() {<br />
-		try {<br />
-			const connection = await amqp.connect(url);<br />
-			const channel = await connection.createChannel();<br />
-			await channel.assertQueue(queue);<br />
-			channel.consume(queue, (msg) => {<br />
-				console.log("Received message:", msg.content.toString());<br />
-			});<br />
-		}<br />
-		catch (error) {<br />
-			console.error("Error receiving message:", error);<br />
-		}<br />
+	try {<br />
+	const connection = await amqp.connect(url);<br />
+	const channel = await connection.createChannel();<br />
+	await channel.assertQueue(queue);<br />
+	channel.consume(queue, (msg) => {<br />
+	console.log("Received message:", msg.content.toString());<br />
+	});<br />
+	}<br />
+	catch (error) {<br />
+	console.error("Error receiving message:", error);<br />
+	}<br />
 	}
 </div>
-<p style="margin-bottom: 10px; color: #333">
+<p>
 	With the concepts introduced in this article, you'll be equipped to build scalable backend applications using
 	message queuing. As you grow more comfortable with implementing message queuing, you can explore advanced features
 	and best practices for more complex systems.

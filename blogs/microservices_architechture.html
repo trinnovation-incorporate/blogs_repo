@@ -1,8 +1,64 @@
-<main style="font-size: 16px; margin: 0 20px">
-	<section style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			Introduction
-		</h2>
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<main>
+	<section>
+		<h2>Introduction</h2>
 		<p>
 			The world of software development is evolving rapidly, and with it, the tools and architectural approaches
 			that help developers build robust, scalable, and resilient applications. Among the various innovations that
@@ -21,48 +77,34 @@
 		</p>
 	</section>
 
-	<section style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			Table of Contents
-		</h2>
-		<ul style="list-style-type: none; padding-left: 0; line-height: 2">
+	<section>
+		<h2>Table of Contents</h2>
+		<ul>
 			<li>
-				<a href="#what-are-microservices" style="color: #1d0ea8; text-decoration: none"
-					>1. What are Microservices?</a
-				>
+				<a href="#what-are-microservices">1. What are Microservices?</a>
 			</li>
 			<li>
-				<a href="#advantages" style="color: #1d0ea8; text-decoration: none">2. The Benefits of Microservices</a>
+				<a href="#advantages">2. The Benefits of Microservices</a>
 			</li>
 			<li>
-				<a href="#architecture" style="color: #1d0ea8; text-decoration: none"
-					>3. Key Principles of Microservices Architecture</a
-				>
+				<a href="#architecture">3. Key Principles of Microservices Architecture</a>
 			</li>
 			<li>
-				<a href="#challenges" style="color: #1d0ea8; text-decoration: none"
-					>4. Challenges of Adopting Microservices</a
-				>
+				<a href="#challenges">4. Challenges of Adopting Microservices</a>
 			</li>
 			<li>
-				<a href="#best-practices" style="color: #1d0ea8; text-decoration: none"
-					>5. Best Practices for Implementing Microservices</a
-				>
+				<a href="#best-practices">5. Best Practices for Implementing Microservices</a>
 			</li>
 			<li>
-				<a href="#use-cases" style="color: #1d0ea8; text-decoration: none"
-					>6. Use Cases and Real-World Examples</a
-				>
+				<a href="#use-cases">6. Use Cases and Real-World Examples</a>
 			</li>
-			<li><a href="#future" style="color: #1d0ea8; text-decoration: none">7. The Future of Microservices</a></li>
-			<li><a href="#conclusion" style="color: #1d0ea8; text-decoration: none">8. Conclusion</a></li>
+			<li><a href="#future">7. The Future of Microservices</a></li>
+			<li><a href="#conclusion">8. Conclusion</a></li>
 		</ul>
 	</section>
 
-	<section id="what-are-microservices" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			1. What are Microservices?
-		</h2>
+	<section id="what-are-microservices">
+		<h2>1. What are Microservices?</h2>
 		<p>
 			Microservices are an architectural style that structures an application as a collection of loosely coupled,
 			independently deployable services. Unlike traditional monolithic applications, where the entire application
@@ -81,8 +123,8 @@
 			independently based on demand, providing greater flexibility and scalability compared to traditional
 			architectures.
 		</p>
-		<h3 style="color: #1d0ea8; font-size: 1.8em">Characteristics of Microservices</h3>
-		<ul style="list-style-type: disc; margin-left: 20px; padding-left: 10px; line-height: 1.8">
+		<h3>Characteristics of Microservices</h3>
+		<ul>
 			<li>
 				Independence: Microservices are autonomous and independent, allowing developers to build, deploy, and
 				scale them separately.
@@ -102,17 +144,15 @@
 		</ul>
 	</section>
 
-	<section id="advantages" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			2. The Benefits of Microservices
-		</h2>
+	<section id="advantages">
+		<h2>2. The Benefits of Microservices</h2>
 		<p>
 			The benefits of microservices architecture are numerous, and they directly address the limitations of
 			traditional monolithic applications. Let’s take a deeper look into the advantages that make microservices a
 			popular choice for modern software development.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">2.1 Scalability and Flexibility</h3>
+		<h3>2.1 Scalability and Flexibility</h3>
 		<p>
 			One of the key advantages of microservices is the ability to scale individual components independently. In a
 			monolithic architecture, scaling the application often means scaling the entire application as one unit,
@@ -125,7 +165,7 @@
 			better resource allocation and ensures that the application remains responsive under heavy loads.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">2.2 Faster Time to Market</h3>
+		<h3>2.2 Faster Time to Market</h3>
 		<p>
 			Microservices enable development teams to work in parallel on different services. Because each service is
 			independent, teams can work on different parts of the application simultaneously without stepping on each
@@ -137,7 +177,7 @@
 			application, making continuous delivery and deployment more manageable.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">2.3 Fault Tolerance and Resilience</h3>
+		<h3>2.3 Fault Tolerance and Resilience</h3>
 		<p>
 			Microservices architectures improve application resilience. If one microservice fails, it doesn’t take down
 			the entire system. For example, if the payment service in an e-commerce application fails, users can still
@@ -150,7 +190,7 @@
 			system can continue operating smoothly despite potential failures in some services.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">2.4 Technology Agnostic</h3>
+		<h3>2.4 Technology Agnostic</h3>
 		<p>
 			With microservices, developers are free to choose the best tools, frameworks, and languages for each
 			service. For example, one service might be built using Java, while another might be built using Python, and
@@ -163,17 +203,15 @@
 		</p>
 	</section>
 
-	<section id="architecture" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			3. Key Principles of Microservices Architecture
-		</h2>
+	<section id="architecture">
+		<h2>3. Key Principles of Microservices Architecture</h2>
 		<p>
 			To fully leverage the benefits of microservices, it is important to understand the key principles that
 			underpin microservices architecture. These principles guide the design and implementation of microservices
 			and ensure that they function as intended.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">3.1 Domain-Driven Design</h3>
+		<h3>3.1 Domain-Driven Design</h3>
 		<p>
 			Microservices are most effective when they are organized around business domains. Domain-driven design (DDD)
 			is a concept that focuses on breaking down the application based on the various business functions it
@@ -186,14 +224,14 @@
 			domain that can be independently developed and maintained.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">3.2 Single Responsibility</h3>
+		<h3>3.2 Single Responsibility</h3>
 		<p>
 			Each microservice should have a single responsibility. This means that a microservice should focus on one
 			specific business capability or function and not be overloaded with multiple, unrelated tasks. This design
 			principle ensures that microservices remain modular and easy to understand, maintain, and test.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">3.3 Loose Coupling</h3>
+		<h3>3.3 Loose Coupling</h3>
 		<p>
 			Microservices should be loosely coupled, meaning that they should operate independently and have minimal
 			dependencies on other services. Loose coupling allows microservices to evolve independently, ensuring that
@@ -205,31 +243,29 @@
 		</p>
 	</section>
 
-	<section id="challenges" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			4. Challenges of Adopting Microservices
-		</h2>
+	<section id="challenges">
+		<h2>4. Challenges of Adopting Microservices</h2>
 		<p>
 			While microservices offer numerous benefits, there are also several challenges that organizations need to
 			address when adopting this architecture. These challenges include increased complexity, service
 			orchestration, and maintaining consistency across services.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">4.1 Increased Complexity</h3>
+		<h3>4.1 Increased Complexity</h3>
 		<p>
 			Microservices can significantly increase the complexity of your system. Instead of having a single codebase
 			and application to manage, you now have multiple services that need to be coordinated. This requires more
 			sophisticated monitoring, logging, and debugging tools to track and manage the health of the entire system.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">4.2 Service Communication</h3>
+		<h3>4.2 Service Communication</h3>
 		<p>
 			Microservices need to communicate with each other efficiently. This often involves using RESTful APIs,
 			messaging queues, or gRPC, but it can be difficult to ensure reliable communication between distributed
 			services, especially as the number of services grows.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">4.3 Data Management</h3>
+		<h3>4.3 Data Management</h3>
 		<p>
 			In a monolithic architecture, it’s easier to manage data because there is usually a single database that all
 			components use. With microservices, each service typically manages its own database or data store, which can
@@ -237,29 +273,27 @@
 		</p>
 	</section>
 
-	<section id="best-practices" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			5. Best Practices for Implementing Microservices
-		</h2>
+	<section id="best-practices">
+		<h2>5. Best Practices for Implementing Microservices</h2>
 		<p>
 			To maximize the benefits of microservices and minimize potential challenges, organizations should follow
 			best practices for implementation. Below are some of the most effective strategies:
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">5.1 Automation of Testing and Deployment</h3>
+		<h3>5.1 Automation of Testing and Deployment</h3>
 		<p>
 			Microservices rely heavily on automation. Automated testing ensures that changes to one service do not break
 			others, while automated deployment pipelines allow for continuous integration and delivery.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">5.2 Use of Containerization</h3>
+		<h3>5.2 Use of Containerization</h3>
 		<p>
 			Containerization tools like Docker allow microservices to run in isolated environments, making it easier to
 			deploy and manage them in production. Containers also make it easier to ensure that microservices run
 			consistently across different environments.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">5.3 Robust Monitoring and Logging</h3>
+		<h3>5.3 Robust Monitoring and Logging</h3>
 		<p>
 			Because microservices operate independently, it is essential to implement robust monitoring and logging
 			systems to track the health and performance of each service. Tools like Prometheus, Grafana, and ELK stack
@@ -267,23 +301,21 @@
 		</p>
 	</section>
 
-	<section id="use-cases" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			6. Use Cases and Real-World Examples
-		</h2>
+	<section id="use-cases">
+		<h2>6. Use Cases and Real-World Examples</h2>
 		<p>
 			Microservices have been successfully implemented by many large organizations to solve complex problems and
 			scale their systems.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">6.1 Netflix</h3>
+		<h3>6.1 Netflix</h3>
 		<p>
 			Netflix is one of the most well-known companies to adopt microservices. The company transitioned to a
 			microservices architecture to handle its massive scale and ensure its platform remained resilient and
 			scalable. Netflix’s system is capable of processing billions of requests daily, thanks to microservices.
 		</p>
 
-		<h3 style="color: #1d0ea8; font-size: 1.8em">6.2 Amazon</h3>
+		<h3>6.2 Amazon</h3>
 		<p>
 			Amazon is another example of a company that successfully implemented microservices. Amazon’s retail
 			platform, AWS, and other services are built on a foundation of microservices. This enables Amazon to scale
@@ -291,10 +323,8 @@
 		</p>
 	</section>
 
-	<section id="future" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			7. The Future of Microservices
-		</h2>
+	<section id="future">
+		<h2>7. The Future of Microservices</h2>
 		<p>
 			The future of microservices is bright, as more organizations adopt this architecture to build modern,
 			scalable applications. With continued advancements in technologies like containerization, serverless
@@ -302,10 +332,8 @@
 		</p>
 	</section>
 
-	<section id="conclusion" style="margin-bottom: 30px">
-		<h2 style="color: #1d0ea8; font-size: 2.2em; border-bottom: 2px solid #eee; padding-bottom: 10px">
-			8. Conclusion
-		</h2>
+	<section id="conclusion">
+		<h2>8. Conclusion</h2>
 		<p>
 			Microservices architecture is reshaping the way we design, build, and scale software applications. By
 			enabling greater flexibility, scalability, and fault tolerance, microservices allow organizations to

@@ -1,5 +1,63 @@
-<div style="margin: 0 auto; padding: 20px">
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<div>
+	<p>
 		In the evolving digital landscape, APIs (Application Programming Interfaces) are pivotal for enabling smooth
 		communication between various software applications. However, as the reliance on APIs grows, it becomes
 		essential to secure the data they handle, especially as it moves between systems. This guide explores the best
@@ -7,121 +65,99 @@
 		applications.
 	</p>
 
-	<h2 style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">Table of Contents</h2>
-	<ul style="list-style-type: none; padding: 0; margin: 0 0 20px">
-		<li style="padding: 5px 0">
-			<a href="#introduction" style="text-decoration: none; color: #3498db">Introduction</a>
+	<h2>Table of Contents</h2>
+	<ul>
+		<li>
+			<a href="#introduction">Introduction</a>
 		</li>
-		<li style="padding: 5px 0">
-			<a href="#api-data-in-transit" style="text-decoration: none; color: #3498db"
-				>Understanding API Data in Transit</a
-			>
+		<li>
+			<a href="#api-data-in-transit">Understanding API Data in Transit</a>
 		</li>
-		<li style="padding: 5px 0">
-			<a href="#importance" style="text-decoration: none; color: #3498db"
-				>The Importance of Securing Data in Transit</a
-			>
+		<li>
+			<a href="#importance">The Importance of Securing Data in Transit</a>
 		</li>
-		<li style="padding: 5px 0">
-			<a href="#threats" style="text-decoration: none; color: #3498db">Key Security Threats for Data Transit</a>
+		<li>
+			<a href="#threats">Key Security Threats for Data Transit</a>
 		</li>
-		<li style="padding: 5px 0">
-			<a href="#best-practices" style="text-decoration: none; color: #3498db"
-				>Effective Practices for Securing API Data</a
-			>
+		<li>
+			<a href="#best-practices">Effective Practices for Securing API Data</a>
 		</li>
-		<li style="padding: 5px 0">
-			<a href="#encryption" style="text-decoration: none; color: #3498db"
-				>Role of Encryption in API Data Security</a
-			>
+		<li>
+			<a href="#encryption">Role of Encryption in API Data Security</a>
 		</li>
 	</ul>
 
-	<h2 id="introduction" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		1. Introduction
-	</h2>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h2 id="introduction">1. Introduction</h2>
+	<p>
 		APIs are the backbone of modern applications, facilitating seamless communication between multiple systems. But
 		as they manage sensitive data, securing this information while it is in transit is paramount. Protecting data in
 		transit safeguards sensitive information—like authentication tokens, personal data, and more—from unauthorized
 		access and potential interception by malicious entities.
 	</p>
 
-	<h2 id="api-data-in-transit" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		2. What is API Data in Transit?
-	</h2>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h2 id="api-data-in-transit">2. What is API Data in Transit?</h2>
+	<p>
 		API data in transit refers to information actively moving from one location to another, whether across the
 		internet or through private networks. In APIs, this data travels between client applications and server
 		endpoints, making protection essential to prevent unauthorized interception or manipulation.
 	</p>
 
-	<h2 id="importance" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		3. Importance of Securing Data in Transit
-	</h2>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h2 id="importance">3. Importance of Securing Data in Transit</h2>
+	<p>
 		Ensuring the security of data in transit preserves its confidentiality, integrity, and authenticity. Failure to
 		do so can lead to severe consequences, including unauthorized access, data breaches, and man-in-the-middle
 		(MITM) attacks, all of which undermine the reliability of data shared between clients and servers.
 	</p>
 
-	<h2 id="threats" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		4. Top API Security Threats During Data Transit
-	</h2>
+	<h2 id="threats">4. Top API Security Threats During Data Transit</h2>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">A. Man-in-the-Middle (MITM) Attacks</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>A. Man-in-the-Middle (MITM) Attacks</h3>
+	<p>
 		MITM attacks occur when an attacker intercepts the communication channel between two parties, like an API client
 		and a server, to eavesdrop or alter the data. This breach can expose sensitive information or lead to
 		manipulated data transmissions.
 	</p>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">B. API Endpoint Hijacking</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>B. API Endpoint Hijacking</h3>
+	<p>
 		Endpoint hijacking involves attackers taking control of an API endpoint, allowing them to manipulate the
 		information exchanged between clients and servers, potentially redirecting the data to malicious sources.
 	</p>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">C. Data Interception</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>C. Data Interception</h3>
+	<p>
 		When attackers intercept unencrypted data, they can access or exploit the information. This threat underlines
 		the importance of encryption to maintain confidentiality and prevent data leaks during transit.
 	</p>
 
-	<h2 id="best-practices" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		5. Best Practices for Securing API Data in Transit
-	</h2>
+	<h2 id="best-practices">5. Best Practices for Securing API Data in Transit</h2>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">A. Implement HTTPS/TLS Encryption</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>A. Implement HTTPS/TLS Encryption</h3>
+	<p>
 		Utilize HTTPS over HTTP to ensure the data sent between clients and servers is encrypted via TLS (Transport
 		Layer Security). This encryption prevents attackers from intercepting and tampering with the information.
 	</p>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">B. Utilize OAuth and OpenID Connect</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>B. Utilize OAuth and OpenID Connect</h3>
+	<p>
 		OAuth 2.0 and OpenID Connect are essential protocols for securing API authentication and authorization. They
 		ensure that only authenticated users and services can access the API, improving security and data integrity.
 	</p>
 
-	<h3 style="font-size: 20px; color: #34495e; margin-top: 15px">C. Implement Secure API Keys Management</h3>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h3>C. Implement Secure API Keys Management</h3>
+	<p>
 		API keys should be securely stored and rotated regularly to reduce exposure risk. Using environment variables
 		rather than hardcoding keys helps manage them securely within the codebase.
 	</p>
 
-	<h2 id="encryption" style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		6. How Encryption Secures API Data in Transit
-	</h2>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h2 id="encryption">6. How Encryption Secures API Data in Transit</h2>
+	<p>
 		Encryption transforms data into an unreadable format for unauthorized users. During transit, encryption like
 		SSL/TLS protects data over the network, while application-layer encryption safeguards sensitive payloads.
 	</p>
 
-	<h2 style="font-size: 24px; color: #2c3e50; margin-top: 20px; margin-bottom: 10px">
-		7. Transport Layer Security (TLS) vs. SSL
-	</h2>
-	<p style="font-size: 16px; line-height: 1.6; margin-bottom: 20px">
+	<h2>7. Transport Layer Security (TLS) vs. SSL</h2>
+	<p>
 		TLS is the upgraded version of SSL, offering enhanced encryption, data integrity, and authentication features.
 		Since SSL has known vulnerabilities, APIs should always use TLS 1.2 or higher for secure data transmission.
 	</p>

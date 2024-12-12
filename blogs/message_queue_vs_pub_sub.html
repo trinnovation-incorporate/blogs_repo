@@ -1,151 +1,300 @@
-<p style="font-size: 16px; margin-bottom: 20px;">Software development, today, involves the use of highly efficient messaging systems. Two common software messaging patterns that developers come across are Message Queue (MQ) and Publisher-Subscriber (Pub/Sub). Understanding the key differences between these two can prove crucial for effective software development.</p>
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
 
-<h2 style="font-size: 24px; color: #2c3e50; margin-top: 40px; margin-bottom: 20px;">Overview Comparison Table</h2>
-<p style="font-size: 16px; margin-bottom: 20px;">This table compares the key features and differences between Message Queues and Pub-Sub systems:</p>
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
 
-<table style="width: 100%; border-collapse: collapse; margin-bottom: 40px;">
-    <thead>
-        <tr>
-            <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Feature</th>
-            <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Message Queue (MQ)</th>
-            <th style="border: 1px solid #ccc; padding: 8px; background-color: #f2f2f2;">Publisher-Subscriber (Pub-Sub)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Concept of Message</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Messages generally have a specific destination.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Messages, also known as events, are sent to multiple subscribers.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Message Delivery</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Messages are delivered to one consumer.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Messages are delivered to all subscribers.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Event Retry</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Support exists, with the use of a dead letter queue.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Depends on the queue implemented under the hood.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Memory</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Requires significant amount of memory.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Requires less memory as messages are discarded post distribution.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Reliability</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Higher, thanks to the acknowledgement concept.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Lower, due to lack of acknowledgment.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Throughput</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Lower, due to the processing of a single message at a time.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Higher, as multiple messages can be processed parallelly.</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ccc; padding: 8px;"><strong>Common Usage</strong></td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Task distribution, load balancing.</td>
-            <td style="border: 1px solid #ccc; padding: 8px;">Multi-casting events, data streaming.</td>
-        </tr>
-    </tbody>
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<p>
+	Software development, today, involves the use of highly efficient messaging systems. Two common software messaging
+	patterns that developers come across are Message Queue (MQ) and Publisher-Subscriber (Pub/Sub). Understanding the
+	key differences between these two can prove crucial for effective software development.
+</p>
+
+<h2>Overview Comparison Table</h2>
+<p>This table compares the key features and differences between Message Queues and Pub-Sub systems:</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Feature</th>
+			<th>Message Queue (MQ)</th>
+			<th>Publisher-Subscriber (Pub-Sub)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><strong>Concept of Message</strong></td>
+			<td>Messages generally have a specific destination.</td>
+			<td>Messages, also known as events, are sent to multiple subscribers.</td>
+		</tr>
+		<tr>
+			<td><strong>Message Delivery</strong></td>
+			<td>Messages are delivered to one consumer.</td>
+			<td>Messages are delivered to all subscribers.</td>
+		</tr>
+		<tr>
+			<td><strong>Event Retry</strong></td>
+			<td>Support exists, with the use of a dead letter queue.</td>
+			<td>Depends on the queue implemented under the hood.</td>
+		</tr>
+		<tr>
+			<td><strong>Memory</strong></td>
+			<td>Requires significant amount of memory.</td>
+			<td>Requires less memory as messages are discarded post distribution.</td>
+		</tr>
+		<tr>
+			<td><strong>Reliability</strong></td>
+			<td>Higher, thanks to the acknowledgement concept.</td>
+			<td>Lower, due to lack of acknowledgment.</td>
+		</tr>
+		<tr>
+			<td><strong>Throughput</strong></td>
+			<td>Lower, due to the processing of a single message at a time.</td>
+			<td>Higher, as multiple messages can be processed parallelly.</td>
+		</tr>
+		<tr>
+			<td><strong>Common Usage</strong></td>
+			<td>Task distribution, load balancing.</td>
+			<td>Multi-casting events, data streaming.</td>
+		</tr>
+	</tbody>
 </table>
 
-<p style="font-size: 16px; margin-bottom: 20px;">The main difference between Message Queuing and the Publish-Subscribe (Pub-Sub) pattern lies in their communication model: Message Queues follow a one-to-one communication model where messages have a specific destination and are consumed by one receiver, while Pub-Sub operates on a one-to-many broadcast model where messages, also known as events, are sent to multiple subscribers.</p>
+<p>
+	The main difference between Message Queuing and the Publish-Subscribe (Pub-Sub) pattern lies in their communication
+	model: Message Queues follow a one-to-one communication model where messages have a specific destination and are
+	consumed by one receiver, while Pub-Sub operates on a one-to-many broadcast model where messages, also known as
+	events, are sent to multiple subscribers.
+</p>
 
-<p style="font-size: 16px; margin-bottom: 40px;">For a detailed walkthrough with visuals, check out this video:</p>
+<p>For a detailed walkthrough with visuals, check out this video:</p>
 
-<h2 id="message-queue" style="font-size: 24px; color: #2c3e50; margin-top: 40px; margin-bottom: 20px;">What is Message Queue?</h2>
-<h3 style="font-size: 20px; color: #34495e; margin-bottom: 20px;">The Basics of Message Queues</h3>
-<p style="font-size: 16px; margin-bottom: 20px;">A Message Queue (MQ), to put it in simple terms, is a mailbox in the digital world. It is a form of asynchronous service-to-service communication used in serverless and microservices architectures. Imagine you have a list of tasks you need help with. You write them down and put them in your mailbox. Then your friend comes, picks a task from the mailbox, completes it, and then comes back for the next one. This is pretty much how a Message Queue works.</p>
-<p style="font-size: 16px; margin-bottom: 20px;">In software terms, an MQ is a place where messages wait until the consumer receives and processes them. Think of it as a queue for your messages, kind of like the line at a supermarket checkout. The producer, an application that produces some kind of data, creates a message and adds it to the queue. Then, the consumer, another application that needs this data, takes the message off the queue and uses it.</p>
+<h2 id="message-queue">What is Message Queue?</h2>
+<h3>The Basics of Message Queues</h3>
+<p>
+	A Message Queue (MQ), to put it in simple terms, is a mailbox in the digital world. It is a form of asynchronous
+	service-to-service communication used in serverless and microservices architectures. Imagine you have a list of
+	tasks you need help with. You write them down and put them in your mailbox. Then your friend comes, picks a task
+	from the mailbox, completes it, and then comes back for the next one. This is pretty much how a Message Queue works.
+</p>
+<p>
+	In software terms, an MQ is a place where messages wait until the consumer receives and processes them. Think of it
+	as a queue for your messages, kind of like the line at a supermarket checkout. The producer, an application that
+	produces some kind of data, creates a message and adds it to the queue. Then, the consumer, another application that
+	needs this data, takes the message off the queue and uses it.
+</p>
 
-<h3 style="font-size: 20px; color: #34495e; margin-top: 40px; margin-bottom: 20px;">Examples of Message Queues</h3>
-<ul style="padding-left: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>RabbitMQ:</strong> RabbitMQ is an open-source message broker that supports multiple messaging protocols. It's known for its flexibility, robustness and consistent support for many languages.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Amazon SQS:</strong> Amazon Simple Queue Service (SQS) is a scalable, fully managed message queuing service for independently designed processing of messages.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Kafka:</strong> Kafka is a distributed streaming platform that's designed to handle real-time data feeds with high throughput and fault tolerance. At its heart is a pub/sub message queue.</p>
-    </li>
+<h3>Examples of Message Queues</h3>
+<ul>
+	<li>
+		<p>
+			<strong>RabbitMQ:</strong> RabbitMQ is an open-source message broker that supports multiple messaging
+			protocols. It's known for its flexibility, robustness and consistent support for many languages.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Amazon SQS:</strong> Amazon Simple Queue Service (SQS) is a scalable, fully managed message queuing
+			service for independently designed processing of messages.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Kafka:</strong> Kafka is a distributed streaming platform that's designed to handle real-time data
+			feeds with high throughput and fault tolerance. At its heart is a pub/sub message queue.
+		</p>
+	</li>
 </ul>
 
-<p style="font-size: 16px; margin-bottom: 40px;">By understanding Message Queues, developers can benefit from asynchronous messaging which can simplify communication and improve scalability within their applications.</p>
+<p>
+	By understanding Message Queues, developers can benefit from asynchronous messaging which can simplify communication
+	and improve scalability within their applications.
+</p>
 
-<h2 id="pros-cons-message-queue" style="font-size: 24px; color: #2c3e50; margin-top: 40px; margin-bottom: 20px;">Pros and Cons of Message Queue</h2>
-<h3 style="font-size: 20px; color: #34495e; margin-bottom: 20px;">Pros of Message Queuing</h3>
-<p style="font-size: 16px; margin-bottom: 20px;">Message Queues come with a myriad of benefits:</p>
-<ul style="padding-left: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Robust and Reliable:</strong> Message Queues are built to withstand system failures. Even if a consumer application goes down, the messages aren't lost. They're safely stored in the queue and can be processed once the consumer is up and running.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Scalability:</strong> They allow for easy horizontal scalability, just by adding more consumers as the load increases.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Decoupling:</strong> Message queues separate the producer and consumer. This reduces dependencies and increases the fault tolerance of applications.</p>
-    </li>
+<h2 id="pros-cons-message-queue">Pros and Cons of Message Queue</h2>
+<h3>Pros of Message Queuing</h3>
+<p>Message Queues come with a myriad of benefits:</p>
+<ul>
+	<li>
+		<p>
+			<strong>Robust and Reliable:</strong> Message Queues are built to withstand system failures. Even if a
+			consumer application goes down, the messages aren't lost. They're safely stored in the queue and can be
+			processed once the consumer is up and running.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Scalability:</strong> They allow for easy horizontal scalability, just by adding more consumers as
+			the load increases.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Decoupling:</strong> Message queues separate the producer and consumer. This reduces dependencies
+			and increases the fault tolerance of applications.
+		</p>
+	</li>
 </ul>
 
-<h3 style="font-size: 20px; color: #34495e; margin-top: 40px; margin-bottom: 20px;">Cons of Message Queuing</h3>
-<p style="font-size: 16px; margin-bottom: 20px;">However, like any technology, they come with some drawbacks:</p>
-<ul style="padding-left: 20px; margin-bottom: 40px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Complexity:</strong> Setting up and managing a message queue can add complexity to a system, requiring developers to learn additional tools and frameworks.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Latency:</strong> While queues help with asynchronicity, they can also introduce latency, as messages must be placed into and taken out of the queue.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Potential Message Loss:</strong> In some implementations, if a message isn’t processed before it is overwritten or the queue is cleared, it can be lost forever.</p>
-    </li>
+<h3>Cons of Message Queuing</h3>
+<p>However, like any technology, they come with some drawbacks:</p>
+<ul>
+	<li>
+		<p>
+			<strong>Complexity:</strong> Setting up and managing a message queue can add complexity to a system,
+			requiring developers to learn additional tools and frameworks.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Latency:</strong> While queues help with asynchronicity, they can also introduce latency, as
+			messages must be placed into and taken out of the queue.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Potential Message Loss:</strong> In some implementations, if a message isn’t processed before it is
+			overwritten or the queue is cleared, it can be lost forever.
+		</p>
+	</li>
 </ul>
 
-<h2 id="publish-subscribe" style="font-size: 24px; color: #2c3e50; margin-top: 40px; margin-bottom: 20px;">What is Publisher-Subscriber?</h2>
-<h3 style="font-size: 20px; color: #34495e; margin-bottom: 20px;">The Basics of Publish-Subscribe</h3>
-<p style="font-size: 16px; margin-bottom: 20px;">In the Publish-Subscribe (Pub-Sub) model, the concept revolves around event distribution. In this model, publishers send messages (events) without knowing who will receive them, while subscribers express interest in specific messages and receive them as they are published. It’s akin to a newsletter where individuals subscribe to receive updates on specific topics.</p>
-<p style="font-size: 16px; margin-bottom: 20px;">When an event is published, all interested subscribers receive it. This decoupling of the producer and consumer allows for more dynamic and flexible systems. Pub-Sub is commonly used in real-time applications like stock price updates, social media feeds, and chat applications.</p>
+<h2 id="publish-subscribe">What is Publisher-Subscriber?</h2>
+<h3>The Basics of Publish-Subscribe</h3>
+<p>
+	In the Publish-Subscribe (Pub-Sub) model, the concept revolves around event distribution. In this model, publishers
+	send messages (events) without knowing who will receive them, while subscribers express interest in specific
+	messages and receive them as they are published. It’s akin to a newsletter where individuals subscribe to receive
+	updates on specific topics.
+</p>
+<p>
+	When an event is published, all interested subscribers receive it. This decoupling of the producer and consumer
+	allows for more dynamic and flexible systems. Pub-Sub is commonly used in real-time applications like stock price
+	updates, social media feeds, and chat applications.
+</p>
 
-<h3 style="font-size: 20px; color: #34495e; margin-top: 40px; margin-bottom: 20px;">Examples of Pub-Sub</h3>
-<ul style="padding-left: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Google Cloud Pub/Sub:</strong> A fully managed, real-time messaging service that allows you to send and receive messages between independent applications.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>AWS SNS:</strong> Amazon Simple Notification Service (SNS) provides a simple way to send notifications from the cloud to users.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Redis Pub/Sub:</strong> A lightweight publish-subscribe system within Redis that allows you to push messages to multiple subscribers.</p>
-    </li>
+<h3>Examples of Pub-Sub</h3>
+<ul>
+	<li>
+		<p>
+			<strong>Google Cloud Pub/Sub:</strong> A fully managed, real-time messaging service that allows you to send
+			and receive messages between independent applications.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>AWS SNS:</strong> Amazon Simple Notification Service (SNS) provides a simple way to send
+			notifications from the cloud to users.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Redis Pub/Sub:</strong> A lightweight publish-subscribe system within Redis that allows you to push
+			messages to multiple subscribers.
+		</p>
+	</li>
 </ul>
 
-<h3 style="font-size: 20px; color: #34495e; margin-top: 40px; margin-bottom: 20px;">Pros and Cons of Pub-Sub</h3>
-<h4 style="font-size: 18px; color: #34495e; margin-bottom: 20px;">Pros of Publish-Subscribe</h4>
-<ul style="padding-left: 20px; margin-bottom: 20px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Loose Coupling:</strong> Publishers and subscribers are decoupled from each other, making it easier to change one without impacting the other.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Scalability:</strong> Supports multiple subscribers, allowing you to scale horizontally without complicating your architecture.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Event-Driven:</strong> Makes it easier to build reactive applications that respond to events as they occur.</p>
-    </li>
+<h3>Pros and Cons of Pub-Sub</h3>
+<h4>Pros of Publish-Subscribe</h4>
+<ul>
+	<li>
+		<p>
+			<strong>Loose Coupling:</strong> Publishers and subscribers are decoupled from each other, making it easier
+			to change one without impacting the other.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Scalability:</strong> Supports multiple subscribers, allowing you to scale horizontally without
+			complicating your architecture.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Event-Driven:</strong> Makes it easier to build reactive applications that respond to events as they
+			occur.
+		</p>
+	</li>
 </ul>
 
-<h4 style="font-size: 18px; color: #34495e; margin-top: 40px; margin-bottom: 20px;">Cons of Publish-Subscribe</h4>
-<ul style="padding-left: 20px; margin-bottom: 40px;">
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Message Delivery Reliability:</strong> Depending on the implementation, message delivery may not be guaranteed, leading to potential data loss.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Increased Complexity:</strong> While it allows for decoupling, managing subscriptions and message flows can become complex, especially as the system grows.</p>
-    </li>
-    <li style="margin-bottom: 10px;">
-        <p style="font-size: 16px;"><strong>Ordering:</strong> Messages may not be received in the order they were sent, making it difficult for applications that depend on message order.</p>
-    </li>
+<h4>Cons of Publish-Subscribe</h4>
+<ul>
+	<li>
+		<p>
+			<strong>Message Delivery Reliability:</strong> Depending on the implementation, message delivery may not be
+			guaranteed, leading to potential data loss.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Increased Complexity:</strong> While it allows for decoupling, managing subscriptions and message
+			flows can become complex, especially as the system grows.
+		</p>
+	</li>
+	<li>
+		<p>
+			<strong>Ordering:</strong> Messages may not be received in the order they were sent, making it difficult for
+			applications that depend on message order.
+		</p>
+	</li>
 </ul>
 
-<p style="font-size: 16px; margin-bottom: 20px;">In conclusion, while both Message Queues and Publish-Subscribe systems serve as effective communication models in software development, their core differences dictate which one to use based on the needs of the application. Understanding their pros and cons will guide developers to implement the right messaging pattern that meets their specific requirements.</p>
+<p>
+	In conclusion, while both Message Queues and Publish-Subscribe systems serve as effective communication models in
+	software development, their core differences dictate which one to use based on the needs of the application.
+	Understanding their pros and cons will guide developers to implement the right messaging pattern that meets their
+	specific requirements.
+</p>

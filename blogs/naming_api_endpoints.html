@@ -1,94 +1,181 @@
-<div style="font-family: Arial, sans-serif; line-height: 1.8; color: #333; font-size: 18px">
-    <p style="font-size: 18px; color: #555; margin-bottom: 24px">
-        Creating a clear and user-friendly API is essential for smooth integration. This guide outlines best practices for naming API endpoints, focusing on REST principles, versioning, and advanced query parameters.
-    </p>
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
 
-    <h2 style="font-size: 28px; font-weight: bold; color: #34495e; margin-bottom: 16px">Key Principles for Naming API Endpoints</h2>
-    <ol style="margin-left: 20px; margin-bottom: 32px">
-        <li style="margin-bottom: 20px">
-            <strong>Use Nouns for Resource Names:</strong> Endpoints should represent resources. For example, use <code>/users</code> instead of <code>/getUsers</code>. This aligns with RESTful practices.
-            <br />
-            <strong>More Info:</strong> <a href="https://restfulapi.net/resource-naming/" style="color: #2980b9">REST Resource Naming Guide</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Use Plural Names for Collections:</strong> Use plural nouns for collections (e.g., <code>/users</code>). For specific resources, add an identifier (e.g., <code>/users/{id}</code>).
-            <br />
-            <strong>More Info:</strong> <a href="https://cloud.google.com/apis/design/naming_convention" style="color: #2980b9">Google API Design Guidelines</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Leverage HTTP Methods for Actions:</strong> Use HTTP methods to define actions:
-            <ul style="margin-left: 20px">
-                <li><strong>GET</strong>: Retrieve a resource (e.g., <code>GET /users</code>).</li>
-                <li><strong>POST</strong>: Create a new resource (e.g., <code>POST /users</code>).</li>
-                <li><strong>PUT</strong>: Replace an existing resource (e.g., <code>PUT /users/{id}</code>).</li>
-                <li><strong>PATCH</strong>: Partially update a resource (e.g., <code>PATCH /users/{id}</code>).</li>
-                <li><strong>DELETE</strong>: Remove a resource (e.g., <code>DELETE /users/{id}</code>).</li>
-            </ul>
-            <br />
-            <strong>More Info:</strong> <a href="https://www.restapitutorial.com/introduction/httpmethods" style="color: #2980b9">HTTP Methods in RESTful APIs</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Hierarchical Structure for Nested Resources:</strong> Use nested URIs to show relationships (e.g., <code>/users/{id}/posts</code>).
-            <br />
-            <strong>Example:</strong> <code>GET /users/123/posts</code> retrieves posts by user ID 123.
-            <br />
-            <strong>More Info:</strong> <a href="https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api" style="color: #2980b9">Best Practices for RESTful API Design</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Adopt Consistent Naming Conventions:</strong> Use a single naming style like <strong>kebab-case</strong> (e.g., <code>/user-profiles</code>) for better readability.
-            <br />
-            <strong>More Info:</strong> <a href="https://restfulapi.net/resource-naming/" style="color: #2980b9">Resource Naming Conventions</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Avoid Special Characters and Spaces:</strong> Use hyphens (e.g., <code>/user-profiles</code>) for clarity and to prevent encoding issues.
-            <br />
-            <strong>RFC Compliance:</strong> Follow <a href="https://tools.ietf.org/html/rfc3986" style="color: #2980b9">RFC 3986</a> for URI standards.
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Prioritize Simplicity and Intuitiveness:</strong> Keep endpoints clear and straightforward. For example, use <code>/reports</code> rather than <code>/data-aggregation-service</code>.
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Version Your API:</strong> Include versioning in the endpoint path (e.g., <code>/v1/users</code>) to manage changes without affecting older clients.
-            <br />
-            <strong>More Info:</strong> <a href="https://restfulapi.net/versioning/" style="color: #2980b9">API Versioning Best Practices</a>
-        </li>
-        <li style="margin-bottom: 20px">
-            <strong>Use Query Parameters for Filtering and Actions:</strong> Use query parameters for filtering (e.g., <code>GET /users?status=active</code>) and pagination (e.g., <code>/orders?sort=desc&limit=10</code>).
-            <br />
-            <strong>More Info:</strong> <a href="https://jsonapi.org/format/#fetching" style="color: #2980b9">Pagination and Filtering in RESTful APIs</a>
-        </li>
-    </ol>
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
 
-    <h2 style="font-size: 28px; font-weight: bold; color: #34495e; margin-bottom: 16px">Advanced Considerations for API Endpoint Design</h2>
-    <ul style="margin-left: 20px; margin-bottom: 32px">
-        <li style="margin-bottom: 16px">
-            <strong>Idempotency in HTTP Methods:</strong> Ensure methods like PUT and DELETE are idempotent. For example, calling <code>DELETE /users/123</code> multiple times should have the same effect.
-            <br />
-            <strong>More Info:</strong> <a href="https://restfulapi.net/idempotent-rest-apis/" style="color: #2980b9">Idempotency in REST APIs</a>
-        </li>
-        <li style="margin-bottom: 16px">
-            <strong>Handling Pagination, Sorting, and Filtering:</strong> Provide clear parameters like <code>page</code>, <code>limit</code>, and <code>sort</code> (e.g., <code>GET /users?page=2&limit=10</code>).
-            <br />
-            <strong>More Info:</strong> <a href="https://developers.google.com/gdata/docs/2.0/basics#PartialResponse" style="color: #2980b9">Google's API Pagination Guidelines</a>
-        </li>
-        <li style="margin-bottom: 16px">
-            <strong>Error Handling:</strong> Use HTTP status codes to indicate request outcomes:
-            <ul style="margin-left: 20px">
-                <li><strong>200 OK</strong>: Request succeeded.</li>
-                <li><strong>400 Bad Request</strong>: Invalid input.</li>
-                <li><strong>404 Not Found</strong>: Resource not found.</li>
-                <li><strong>500 Internal Server Error</strong>: Server error.</li>
-            </ul>
-            <br />
-            <strong>More Info:</strong> <a href="https://www.restapitutorial.com/httpstatuscodes" style="color: #2980b9">HTTP Status Codes for REST APIs</a>
-        </li>
-    </ul>
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
 
-    <h2 style="font-size: 28px; font-weight: bold; color: #34495e; margin-bottom: 16px">Conclusion</h2>
-    <p style="font-size: 18px; color: #555">
-        A well-designed API following these principles ensures clarity and consistency for developers. By adhering to these naming conventions, versioning strategies, and error handling practices, your API will become more reliable and scalable.
-        <br />
-        <strong>For more information:</strong>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" style="color: #2980b9">MDN Web Docs - HTTP Overview</a>
-    </p>
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<div>
+	<p>
+		Creating a clear and user-friendly API is essential for smooth integration. This guide outlines best practices
+		for naming API endpoints, focusing on REST principles, versioning, and advanced query parameters.
+	</p>
+
+	<h2>Key Principles for Naming API Endpoints</h2>
+	<ol>
+		<li>
+			<strong>Use Nouns for Resource Names:</strong> Endpoints should represent resources. For example, use
+			<code>/users</code> instead of <code>/getUsers</code>. This aligns with RESTful practices.
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://restfulapi.net/resource-naming/">REST Resource Naming Guide</a>
+		</li>
+		<li>
+			<strong>Use Plural Names for Collections:</strong> Use plural nouns for collections (e.g.,
+			<code>/users</code>). For specific resources, add an identifier (e.g., <code>/users/{id}</code>).
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://cloud.google.com/apis/design/naming_convention">Google API Design Guidelines</a>
+		</li>
+		<li>
+			<strong>Leverage HTTP Methods for Actions:</strong> Use HTTP methods to define actions:
+			<ul>
+				<li><strong>GET</strong>: Retrieve a resource (e.g., <code>GET /users</code>).</li>
+				<li><strong>POST</strong>: Create a new resource (e.g., <code>POST /users</code>).</li>
+				<li><strong>PUT</strong>: Replace an existing resource (e.g., <code>PUT /users/{id}</code>).</li>
+				<li><strong>PATCH</strong>: Partially update a resource (e.g., <code>PATCH /users/{id}</code>).</li>
+				<li><strong>DELETE</strong>: Remove a resource (e.g., <code>DELETE /users/{id}</code>).</li>
+			</ul>
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://www.restapitutorial.com/introduction/httpmethods">HTTP Methods in RESTful APIs</a>
+		</li>
+		<li>
+			<strong>Hierarchical Structure for Nested Resources:</strong> Use nested URIs to show relationships (e.g.,
+			<code>/users/{id}/posts</code>).
+			<br />
+			<strong>Example:</strong> <code>GET /users/123/posts</code> retrieves posts by user ID 123.
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api"
+				>Best Practices for RESTful API Design</a
+			>
+		</li>
+		<li>
+			<strong>Adopt Consistent Naming Conventions:</strong> Use a single naming style like
+			<strong>kebab-case</strong> (e.g., <code>/user-profiles</code>) for better readability.
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://restfulapi.net/resource-naming/">Resource Naming Conventions</a>
+		</li>
+		<li>
+			<strong>Avoid Special Characters and Spaces:</strong> Use hyphens (e.g., <code>/user-profiles</code>) for
+			clarity and to prevent encoding issues.
+			<br />
+			<strong>RFC Compliance:</strong> Follow <a href="https://tools.ietf.org/html/rfc3986">RFC 3986</a> for URI
+			standards.
+		</li>
+		<li>
+			<strong>Prioritize Simplicity and Intuitiveness:</strong> Keep endpoints clear and straightforward. For
+			example, use <code>/reports</code> rather than <code>/data-aggregation-service</code>.
+		</li>
+		<li>
+			<strong>Version Your API:</strong> Include versioning in the endpoint path (e.g., <code>/v1/users</code>) to
+			manage changes without affecting older clients.
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://restfulapi.net/versioning/">API Versioning Best Practices</a>
+		</li>
+		<li>
+			<strong>Use Query Parameters for Filtering and Actions:</strong> Use query parameters for filtering (e.g.,
+			<code>GET /users?status=active</code>) and pagination (e.g., <code>/orders?sort=desc&limit=10</code>).
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://jsonapi.org/format/#fetching">Pagination and Filtering in RESTful APIs</a>
+		</li>
+	</ol>
+
+	<h2>Advanced Considerations for API Endpoint Design</h2>
+	<ul>
+		<li>
+			<strong>Idempotency in HTTP Methods:</strong> Ensure methods like PUT and DELETE are idempotent. For
+			example, calling <code>DELETE /users/123</code> multiple times should have the same effect.
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://restfulapi.net/idempotent-rest-apis/">Idempotency in REST APIs</a>
+		</li>
+		<li>
+			<strong>Handling Pagination, Sorting, and Filtering:</strong> Provide clear parameters like
+			<code>page</code>, <code>limit</code>, and <code>sort</code> (e.g.,
+			<code>GET /users?page=2&limit=10</code>).
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://developers.google.com/gdata/docs/2.0/basics#PartialResponse"
+				>Google's API Pagination Guidelines</a
+			>
+		</li>
+		<li>
+			<strong>Error Handling:</strong> Use HTTP status codes to indicate request outcomes:
+			<ul>
+				<li><strong>200 OK</strong>: Request succeeded.</li>
+				<li><strong>400 Bad Request</strong>: Invalid input.</li>
+				<li><strong>404 Not Found</strong>: Resource not found.</li>
+				<li><strong>500 Internal Server Error</strong>: Server error.</li>
+			</ul>
+			<br />
+			<strong>More Info:</strong>
+			<a href="https://www.restapitutorial.com/httpstatuscodes">HTTP Status Codes for REST APIs</a>
+		</li>
+	</ul>
+
+	<h2>Conclusion</h2>
+	<p>
+		A well-designed API following these principles ensures clarity and consistency for developers. By adhering to
+		these naming conventions, versioning strategies, and error handling practices, your API will become more
+		reliable and scalable.
+		<br />
+		<strong>For more information:</strong>
+		<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">MDN Web Docs - HTTP Overview</a>
+	</p>
 </div>

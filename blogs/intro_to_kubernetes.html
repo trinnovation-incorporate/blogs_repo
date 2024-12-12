@@ -1,7 +1,65 @@
-<main style="font-size: 16px; margin: 0 20px">
+<style>
+	body {
+		font-family: 'Arial', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		color: #333;
+		background-color: #f9f9f9;
+	}
+
+	p {
+		margin-bottom: 1em; /* Space after each paragraph */
+		font-size: 1rem;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-bottom: 0.75em;
+		font-weight: bold;
+	}
+
+	h1 {
+		font-size: 2rem;
+	}
+
+	h2 {
+		font-size: 1.75rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1.25rem;
+	}
+
+	h5 {
+		font-size: 1rem;
+	}
+
+	h6 {
+		font-size: 0.875rem;
+	}
+
+	ul,
+	ol {
+		margin-left: 2rem;
+		margin-bottom: 1.5em;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+	}
+</style>
+<main>
 	<article>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">What is Kubernetes?</h2>
+		<section>
+			<h2>What is Kubernetes?</h2>
 			<p>
 				Kubernetes, often referred to as K8s, is an open-source container orchestration platform that automates
 				the deployment, scaling, and management of containerized applications. Developed initially by Google,
@@ -14,51 +72,51 @@
 				workloads in dynamic environments.
 			</p>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Why is Kubernetes So Popular?</h2>
+		<section>
+			<h2>Why is Kubernetes So Popular?</h2>
 			<p>
 				Kubernetes has gained massive popularity because it addresses many challenges associated with
 				traditional infrastructure management and container orchestration. Let’s explore the primary reasons why
 				Kubernetes stands out:
 			</p>
-			<h3 style="color: #333">1. Automation</h3>
+			<h3>1. Automation</h3>
 			<p>
 				One of Kubernetes' standout features is its ability to automate tasks that were traditionally manual. It
 				automates the deployment of containers, monitors their health, and reschedules them on healthy nodes if
 				any container fails.
 			</p>
-			<h3 style="color: #333">2. Scalability</h3>
+			<h3>2. Scalability</h3>
 			<p>
 				Scaling applications used to be a cumbersome process, often requiring manual reconfigurations.
 				Kubernetes allows for automatic horizontal scaling of applications based on metrics like CPU or memory
 				usage.
 			</p>
-			<h3 style="color: #333">3. Portability</h3>
+			<h3>3. Portability</h3>
 			<p>
 				Kubernetes supports hybrid and multi-cloud deployments, ensuring applications can run anywhere—whether
 				on-premises, in public clouds, or in a hybrid setup. This level of portability is crucial in today’s
 				multi-cloud environments.
 			</p>
-			<h3 style="color: #333">4. Community and Ecosystem</h3>
+			<h3>4. Community and Ecosystem</h3>
 			<p>
 				As an open-source platform, Kubernetes benefits from an active community of contributors. Its extensive
 				ecosystem includes tools for logging, monitoring, networking, and security, enabling developers to build
 				robust production-grade applications.
 			</p>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Understanding Kubernetes Architecture</h2>
+		<section>
+			<h2>Understanding Kubernetes Architecture</h2>
 			<p>
 				To truly understand Kubernetes, it’s important to grasp its underlying architecture. At its core,
 				Kubernetes is a cluster-based system that consists of control plane components and worker nodes. Here’s
 				a breakdown of its key elements:
 			</p>
-			<h3 style="color: #333">1. Control Plane</h3>
+			<h3>1. Control Plane</h3>
 			<p>
 				The control plane is the "brain" of Kubernetes. It manages and orchestrates the cluster, ensuring that
 				the desired state of the system is maintained. Key components of the control plane include:
 			</p>
-			<ul style="padding-left: 20px; list-style: circle">
+			<ul>
 				<li>
 					<strong>API Server:</strong> Acts as the gateway for all Kubernetes operations. Developers interact
 					with the API server using tools like <code>kubectl</code>.
@@ -76,9 +134,9 @@
 					states.
 				</li>
 			</ul>
-			<h3 style="color: #333">2. Worker Nodes</h3>
+			<h3>2. Worker Nodes</h3>
 			<p>Worker nodes are where applications actually run. Each node includes the following components:</p>
-			<ul style="padding-left: 20px; list-style: circle">
+			<ul>
 				<li>
 					<strong>Kubelet:</strong> An agent that ensures containers are running in accordance with the
 					defined specifications.
@@ -92,47 +150,47 @@
 				</li>
 			</ul>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Key Kubernetes Concepts</h2>
+		<section>
+			<h2>Key Kubernetes Concepts</h2>
 			<p>
 				Kubernetes introduces several unique concepts to manage containerized applications efficiently. Let’s
 				dive into some of the most critical ones:
 			</p>
-			<h3 style="color: #333">1. Pods</h3>
+			<h3>1. Pods</h3>
 			<p>
 				A pod is the smallest deployable unit in Kubernetes. Each pod encapsulates one or more containers that
 				share the same network and storage. Pods are ephemeral, meaning they can be replaced automatically in
 				case of failure.
 			</p>
-			<h3 style="color: #333">2. Services</h3>
+			<h3>2. Services</h3>
 			<p>
 				A service provides a stable IP and DNS name to ensure seamless communication between pods or with
 				external systems. Even if the underlying pods are replaced, the service remains unchanged.
 			</p>
-			<h3 style="color: #333">3. Deployments</h3>
+			<h3>3. Deployments</h3>
 			<p>
 				Deployments allow you to define the desired state of your application, including the number of replicas
 				and the container image to use. They make it easy to roll out updates and rollback changes if needed.
 			</p>
-			<h3 style="color: #333">4. ConfigMaps and Secrets</h3>
+			<h3>4. ConfigMaps and Secrets</h3>
 			<p>
 				Kubernetes uses ConfigMaps and Secrets to manage configuration data and sensitive information (like API
 				keys) separately from the application code.
 			</p>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Deploying Your First Kubernetes Application</h2>
+		<section>
+			<h2>Deploying Your First Kubernetes Application</h2>
 			<p>
 				Deploying an application in Kubernetes involves writing YAML configuration files and applying them to
 				the cluster using the <code>kubectl</code> command-line tool. Let’s walk through a basic deployment
 				process:
 			</p>
-			<h3 style="color: #333">1. Create a Deployment</h3>
+			<h3>1. Create a Deployment</h3>
 			<p>
 				A deployment ensures that a specified number of pod replicas are running. Here’s an example YAML
 				configuration for a deployment:
 			</p>
-			<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto">
+			<pre>
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -154,21 +212,21 @@ spec:
     - containerPort: 80
             </pre>
 			<p>Apply this configuration using the command:</p>
-			<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto">
+			<pre>
 kubectl apply -f deployment.yaml
             </pre>
-			<h3 style="color: #333">2. Expose the Deployment</h3>
+			<h3>2. Expose the Deployment</h3>
 			<p>
 				Once the deployment is running, expose it as a service to make it accessible. Use the following command:
 			</p>
-			<pre style="background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto">
+			<pre>
 kubectl expose deployment nginx-deployment --type=NodePort --port=80
             </pre>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Best Practices for Kubernetes</h2>
+		<section>
+			<h2>Best Practices for Kubernetes</h2>
 			<p>Adopting Kubernetes effectively requires following certain best practices. Here are a few tips:</p>
-			<ul style="padding-left: 20px; list-style: disc">
+			<ul>
 				<li>
 					<strong>Use Namespaces:</strong> Organize resources into namespaces for better management and
 					isolation.
@@ -187,8 +245,8 @@ kubectl expose deployment nginx-deployment --type=NodePort --port=80
 				</li>
 			</ul>
 		</section>
-		<section style="margin-bottom: 30px">
-			<h2 style="color: #007bff">Conclusion</h2>
+		<section>
+			<h2>Conclusion</h2>
 			<p>
 				Kubernetes is a transformative platform that simplifies container orchestration and application
 				management at scale. While the learning curve may seem steep initially, its extensive documentation and
