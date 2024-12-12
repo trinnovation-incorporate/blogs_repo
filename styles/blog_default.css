@@ -59,17 +59,6 @@ li {
 	margin-bottom: 0.5em;
 }
 
-a {
-	color: #007bff; /* Standard blue link color */
-	text-decoration: none;
-	transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-a:hover {
-	color: #0056b3; /* Darker blue on hover */
-	text-decoration: underline;
-}
-
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -89,15 +78,6 @@ td {
 th {
 	background-color: #f2f2f2; /* Light gray background for header cells */
 	font-weight: bold;
-}
-
-img {
-	max-width: 100%; /* Make images responsive */
-	height: auto;
-	display: block; /* Prevents inline spacing issues */
-	margin: 1em auto; /* Center images */
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-	border-radius: 5px;
 }
 
 code {
