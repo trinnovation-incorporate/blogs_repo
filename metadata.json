@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"ai_fashion_design": {
+			"title": "AI-Driven Design and Personalization: Transforming the Fashion Industry",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["AI-Driven", "Design", "Personalization", "Fashion Industry"],
+			"category": "Fashion",
+			"summary": "The fashion industry, a realm of creativity and innovation, is undergoing a monumental transformation powered by artificial intelligence (AI).",
+			"content_url": "blogs/ai_fashion_design.html",
+			"display_image": "display/ai_fashion_design.webp"
+		},
 		"fashion_tech_startup": {
 			"title": "Fashion Tech Startups: The Future of Fashion Meets Innovation",
 			"author_name": "Trinc Academy",
