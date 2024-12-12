@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"web3_decentralization": {
+			"title": "The Rise of Web3 and Decentralized Technologies",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Web3", "Decentralized", "Technologies"],
+			"category": "Tech",
+			"summary": "The internet has undergone a dramatic evolution since its inception. From the static web pages of Web1 to the interactive social platforms of Web2, we've witnessed a constant shift in how we interact with the digital world. Now, a new era is dawning: Web3.",
+			"content_url": "blogs/web3_decentralization.html",
+			"display_image": "display/web3_decentralization.webp"
+		},
 		"quantum_computing_applications": {
 			"title": "Quantum Computing and Its Applications",
 			"author_name": "Trinc Academy",
