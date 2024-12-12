@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"fashion_tech_startup": {
+			"title": "Fashion Tech Startups: The Future of Fashion Meets Innovation",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Fashion Tech", "Startups", "Fashion"],
+			"category": "Fashion",
+			"summary": "In the last decade, the fashion industry has undergone a significant transformation with the rise of technology.",
+			"content_url": "blogs/fashion_tech_startup.html",
+			"display_image": "display/fashion_tech_startup.png"
+		},
 		"smart_fabric_tech": {
 			"title": "Smart Fabrics and Wearable Tech: The Future of Fashion and Functionality",
 			"author_name": "Trinc Academy",
