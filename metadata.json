@@ -1,12 +1,23 @@
 {
 	"blogs": {
+		"gautam_adani_journey": {
+			"title": "Adani's Ascent: From Gujarat's Streets to Global Dominance",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Gautam Adani", "Gujarat", "Global", "Person"],
+			"category": "Person",
+			"summary": "Gautam Adani is an Indian billionaire industrialist and the chairman of the Adani Group, a multinational conglomerate involved in various sectors such as energy, infrastructure, logistics, agriculture, and more. His journey is a remarkable one, marked by ambition, rapid growth, controversies, and significant achievements.",
+			"content_url": "blogs/gautam_adani_journey.html",
+			"display_image": "display/gautam_adani_journey.png"
+		},
 		"elon_musk_journey": {
 			"title": "Elon Musk: A Journey to Billionaire Net-Worth Entrepreneur",
 			"author_name": "Trinc Academy",
 			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Elon Musk", "Journey", "SpaceX", "Twitter"],
-			"category": "Tech",
+			"category": "Person",
 			"summary": "Elon Musk, the enigmatic entrepreneur, inventor, and billionaire, is one of the most talked-about individuals of our time.",
 			"content_url": "blogs/elon_musk_journey.html",
 			"display_image": "display/elon_musk_journey.jpg"
