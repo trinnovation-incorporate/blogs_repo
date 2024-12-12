@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"sustainable_fashion_industry": {
+			"title": "Sustainable Fashion: Shaping a Greener, More Ethical Future for the Fashion Industry",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "12 Dec, 2024",
+			"tags": ["Sustainable Fashion", "Ethical Future", "Fashion Industry"],
+			"category": "Fashion",
+			"summary": "Fashion is one of the most influential industries in the world, but it's also one of the most harmful to the environment.",
+			"content_url": "blogs/sustainable_fashion_industry.html",
+			"display_image": "display/sustainable_fashion_industry.webp"
+		},
 		"digital_fashion_exploration": {
 			"title": "Digital Fashion: A Comprehensive Exploration",
 			"author_name": "Trinc Academy",
