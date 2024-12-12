@@ -5,10 +5,11 @@
 		line-height: 1.6;
 		color: #333;
 		background-color: #f9f9f9;
+		margin: 20px; /* Add some overall margin to the body */
 	}
 
 	p {
-		margin-bottom: 1em; /* Space after each paragraph */
+		margin-bottom: 1em;
 		font-size: 1rem;
 	}
 
@@ -20,40 +21,108 @@
 	h6 {
 		margin-bottom: 0.75em;
 		font-weight: bold;
+		line-height: 1.2; /* Improve heading line height */
 	}
 
 	h1 {
-		font-size: 2rem;
+		font-size: 2.5rem; /* Slightly larger h1 */
 	}
 
 	h2 {
-		font-size: 1.75rem;
+		font-size: 2rem;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 	}
 
 	h4 {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}
 
 	h5 {
-		font-size: 1rem;
+		font-size: 1.25rem;
 	}
 
 	h6 {
-		font-size: 0.875rem;
+		font-size: 1rem;
 	}
 
 	ul,
 	ol {
 		margin-left: 2rem;
 		margin-bottom: 1.5em;
+		padding-left: 0; /* Reset default padding */
+		list-style-position: outside; /* Ensure bullets/numbers are outside the content box */
 	}
 
 	li {
 		margin-bottom: 0.5em;
+	}
+
+	a {
+		color: #007bff; /* Standard blue link color */
+		text-decoration: none;
+		transition: color 0.3s ease; /* Smooth color transition on hover */
+	}
+
+	a:hover {
+		color: #0056b3; /* Darker blue on hover */
+		text-decoration: underline;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 1.5em;
+		border: 1px solid #ddd; /* Light gray border */
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* subtle shadow */
+	}
+
+	th,
+	td {
+		padding: 0.75rem;
+		text-align: left;
+		border: 1px solid #ddd;
+		vertical-align: top; /* Align cell content to the top */
+	}
+
+	th {
+		background-color: #f2f2f2; /* Light gray background for header cells */
+		font-weight: bold;
+	}
+
+	img {
+		max-width: 100%; /* Make images responsive */
+		height: auto;
+		display: block; /* Prevents inline spacing issues */
+		margin: 1em auto; /* Center images */
+		box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+	}
+
+	code {
+		font-family: monospace;
+		background-color: #f0f0f0;
+		padding: 2px 4px;
+		border-radius: 3px;
+		font-size: 0.9rem;
+	}
+
+	pre {
+		background-color: #f0f0f0;
+		padding: 1rem;
+		border-radius: 5px;
+		overflow-x: auto; /* Enable horizontal scrolling for long code blocks */
+		font-family: monospace;
+	}
+
+	blockquote {
+		border-left: 5px solid #ccc;
+		padding: 1rem;
+		margin: 1rem 0;
+		background-color: #f8f8f8;
+		font-style: italic;
 	}
 </style>
 <p>
