@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"yoga_for_stress_relief_and_flexibility": {
+			"title": "Yoga for Stress Relief and Flexibility",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "13 Dec, 2024",
+			"tags": ["Yoga", "Stress Relief", "Flexibility", "Creativity"],
+			"category": "Fashion",
+			"summary": "In today's fast-paced world, stress has become a constant companion for many people.",
+			"content_url": "blogs/yoga_for_stress_relief_and_flexibility.html",
+			"display_image": "display/yoga_for_stress_relief_and_flexibility.png"
+		},
 		"3d_design_digital_fashion": {
 			"title": "3D Design and Digital Fashion: Redefining Creativity and Sustainability",
 			"author_name": "Trinc Academy",
