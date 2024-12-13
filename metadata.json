@@ -1,5 +1,16 @@
 {
 	"blogs": {
+		"sleeping_fitness_ingredient": {
+			"title": "Sleep and Recovery: The Missing Fitness Ingredient",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "13 Dec, 2024",
+			"tags": ["Sleep", "Recovery", "Fitness", "Ingredient"],
+			"category": "Fitness",
+			"summary": "When we think of fitness, we often imagine grueling workouts and carefully planned meals. But there's one factor that many neglect – sleep.",
+			"content_url": "blogs/sleeping_fitness_ingredient.html",
+			"display_image": "display/sleeping_fitness_ingredient.png"
+		},
 		"virtual_fitness_classes": {
 			"title": "Virtual Fitness Classes: The Future of Fitness",
 			"author_name": "Trinc Academy",
