@@ -1,5 +1,27 @@
 {
 	"blogs": {
+		"smart_footwears": {
+			"title": "Smart Footwear: Redefining the Way We Walk",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "13 Dec, 2024",
+			"tags": ["Smart Footwear", "Footwear", "Walk", "Fashion"],
+			"category": "Fashion",
+			"summary": "The evolution of footwear has always mirrored societal advancements. From the early protective leather sandals of ancient civilizations",
+			"content_url": "blogs/smart_footwears.html",
+			"display_image": "display/smart_footwears.webp"
+		},
+		"virtual_reality_fashion": {
+			"title": "Virtual Reality in Fashion: A Digital Transformation",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "13 Dec, 2024",
+			"tags": ["Virtual Reality", "Fashion", "Digital", "Transformation"],
+			"category": "Fashion",
+			"summary": "The fashion industry, long synonymous with innovation, creativity, and change, is now undergoing a digital revolution, driven in part by advancements in virtual reality (VR) technology.",
+			"content_url": "blogs/virtual_reality_fashion.html",
+			"display_image": "display/virtual_reality_fashion.jpg"
+		},
 		"sleeping_fitness_ingredient": {
 			"title": "Sleep and Recovery: The Missing Fitness Ingredient",
 			"author_name": "Trinc Academy",
