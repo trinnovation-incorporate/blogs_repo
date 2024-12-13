@@ -1,9 +1,25 @@
 {
 	"blogs": {
+		"nutrition_for_building_muscles": {
+			"title": "Nutrition Tips for Building Muscle",
+			"date": "13 Dec, 2024",
+			"tags": ["Nutrition", "Building", "Muscle", "Tips"],
+			"category": "Fashion",
+			"summary": "Building muscle requires not just hard work in the gym, but also proper nutrition.",
+			"content_url": "blogs/nutrition_for_building_muscles.html",
+			"display_image": "display/nutrition_for_building_muscles.webp"
+		},
+		"plant_based_diet": {
+			"title": "Plant-Based Diets for Optimal Health",
+			"date": "13 Dec, 2024",
+			"tags": ["Plant", "Diets", "Health"],
+			"category": "Fitness",
+			"summary": "A plant-based diet is one that primarily focuses on whole, plant-based foods such as fruits, vegetables, whole grains, legumes, nuts, and seeds.",
+			"content_url": "blogs/plant_based_diet.html",
+			"display_image": "display/plant_based_diet.webp"
+		},
 		"smart_footwears": {
 			"title": "Smart Footwear: Redefining the Way We Walk",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Smart Footwear", "Footwear", "Walk", "Fashion"],
 			"category": "Fashion",
@@ -13,8 +29,6 @@
 		},
 		"virtual_reality_fashion": {
 			"title": "Virtual Reality in Fashion: A Digital Transformation",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Virtual Reality", "Fashion", "Digital", "Transformation"],
 			"category": "Fashion",
@@ -24,8 +38,6 @@
 		},
 		"sleeping_fitness_ingredient": {
 			"title": "Sleep and Recovery: The Missing Fitness Ingredient",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Sleep", "Recovery", "Fitness", "Ingredient"],
 			"category": "Fitness",
@@ -35,8 +47,6 @@
 		},
 		"virtual_fitness_classes": {
 			"title": "Virtual Fitness Classes: The Future of Fitness",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Fitness", "Classes", "Virtual", "Future"],
 			"category": "Fitness",
@@ -46,8 +56,6 @@
 		},
 		"yoga_for_stress_relief_and_flexibility": {
 			"title": "Yoga for Stress Relief and Flexibility",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Yoga", "Stress Relief", "Flexibility", "Creativity"],
 			"category": "Fitness",
@@ -57,8 +65,6 @@
 		},
 		"3d_design_digital_fashion": {
 			"title": "3D Design and Digital Fashion: Redefining Creativity and Sustainability",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["3D", "Design", "Digital", "Creativity"],
 			"category": "Fashion",
@@ -68,8 +74,6 @@
 		},
 		"3d_printing_fashion": {
 			"title": "3D Printing in Fashion: A Revolutionary Shift in the Industry",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["3D", "Printing", "Fashion", "Fashion Industry"],
 			"category": "Fashion",
@@ -79,8 +83,6 @@
 		},
 		"ai_fashion_design": {
 			"title": "AI-Driven Design and Personalization: Transforming the Fashion Industry",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["AI-Driven", "Design", "Personalization", "Fashion Industry"],
 			"category": "Fashion",
@@ -90,8 +92,6 @@
 		},
 		"fashion_tech_startup": {
 			"title": "Fashion Tech Startups: The Future of Fashion Meets Innovation",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Fashion Tech", "Startups", "Fashion"],
 			"category": "Fashion",
@@ -101,8 +101,6 @@
 		},
 		"smart_fabric_tech": {
 			"title": "Smart Fabrics and Wearable Tech: The Future of Fashion and Functionality",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Smart Fabrics", "Wearable", "Tech"],
 			"category": "Fashion",
@@ -112,8 +110,6 @@
 		},
 		"textile_sustainability": {
 			"title": "Sustainability Through Textile Innovations",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Sustainability", "Textile", "Innovations"],
 			"category": "Fashion",
@@ -123,8 +119,6 @@
 		},
 		"sustainable_fashion_industry": {
 			"title": "Sustainable Fashion: Shaping a Greener, More Ethical Future for the Fashion Industry",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Sustainable Fashion", "Ethical Future", "Fashion Industry"],
 			"category": "Fashion",
@@ -134,8 +128,6 @@
 		},
 		"digital_fashion_exploration": {
 			"title": "Digital Fashion: A Comprehensive Exploration",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Digital Fashion", "Exploration", "Fashion", "Art"],
 			"category": "Fashion",
@@ -145,8 +137,6 @@
 		},
 		"gautam_adani_journey": {
 			"title": "Adani's Ascent: From Gujarat's Streets to Global Dominance",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Gautam Adani", "Gujarat", "Global", "Person"],
 			"category": "Person",
@@ -156,8 +146,6 @@
 		},
 		"elon_musk_journey": {
 			"title": "Elon Musk: A Journey to Billionaire Net-Worth Entrepreneur",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Elon Musk", "Journey", "SpaceX", "Twitter"],
 			"category": "Person",
@@ -167,8 +155,6 @@
 		},
 		"space_travel_civilization": {
 			"title": "The Evolution of Space Exploration and Colonization: A Journey Through Time",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Evolution", "Space Exploration", "Colonization"],
 			"category": "Tech",
@@ -178,8 +164,6 @@
 		},
 		"web3_decentralization": {
 			"title": "The Rise of Web3 and Decentralized Technologies",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Web3", "Decentralized", "Technologies"],
 			"category": "Tech",
@@ -189,8 +173,6 @@
 		},
 		"quantum_computing_applications": {
 			"title": "Quantum Computing and Its Applications",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Quantum Computing", "Applications", "Future"],
 			"category": "Tech",
@@ -200,8 +182,6 @@
 		},
 		"ai_ml_advancements": {
 			"title": "Artificial Intelligence and Machine Learning Advancements",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "12 Dec, 2024",
 			"tags": ["Artificial Intelligence", "Machine Learning", "Future"],
 			"category": "Tech",
@@ -211,8 +191,6 @@
 		},
 		"microservices_architechture": {
 			"title": "Microservices Architecture in Software Development",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["Microservices", "Architecture", "Software"],
 			"category": "Tech",
@@ -222,8 +200,6 @@
 		},
 		"intro_to_kubernetes": {
 			"title": "Introduction to Kubernetes for Beginners",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["Kubernetes", "DevOps", "Cloud Hosting"],
 			"category": "Tech",
@@ -233,8 +209,6 @@
 		},
 		"understanding_saas_and_paas_models": {
 			"title": "A Guide to Understanding SaaS and PaaS Models",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["SaaS", "PaaS", "Models"],
 			"category": "Tech",
@@ -244,8 +218,6 @@
 		},
 		"future_of_quantum_computing": {
 			"title": "Quantum Computing: What It Means for the Future",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["Quantum", "Computing", "Future"],
 			"category": "Tech",
@@ -255,8 +227,6 @@
 		},
 		"role_of_devops": {
 			"title": "The Role of DevOps in Modern Software Development",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["DevOps", "Software", "Development"],
 			"category": "Tech",
@@ -266,8 +236,6 @@
 		},
 		"5g_changing_technology_landscape": {
 			"title": "How 5G is Changing the Technology Landscape",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["5G", "Network"],
 			"category": "Tech",
@@ -277,8 +245,6 @@
 		},
 		"intro_to_cybersecurity": {
 			"title": "Understanding the Basics of Cybersecurity",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["Cybersecurity", "Technology"],
 			"category": "Tech",
@@ -288,8 +254,6 @@
 		},
 		"intro_to_blockchain_technology": {
 			"title": "Introduction to Blockchain Technology and Its Applications",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "23 Nov, 2024",
 			"tags": ["Blockchain", "Technology", "Ledger", "Smart Contract"],
 			"category": "Tech",
@@ -299,8 +263,6 @@
 		},
 		"http_request_methods": {
 			"title": "HTTP Request Methods: A Guide to REST API Communication",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "29 Oct, 2024",
 			"tags": ["HTTP", "Headers", "API", "Request"],
 			"category": "Tech",
@@ -310,8 +272,6 @@
 		},
 		"message_queue_vs_pub_sub": {
 			"title": "Message Queue vs Pub-Sub",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "04 Oct, 2024",
 			"tags": ["Message Queue", "PUB/SUB", "RabbitMQ", "Kafka"],
 			"category": "Tech",
@@ -321,8 +281,6 @@
 		},
 		"multithreading": {
 			"title": "Multithreading: Maximizing Efficiency in Modern Computing",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "30 Sept, 2024",
 			"tags": ["Multithreading", "Multiprocessing", "Computing"],
 			"category": "Tech",
@@ -332,8 +290,6 @@
 		},
 		"scaling_database": {
 			"title": "System Design: How to Scale a Database",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "29 Sept, 2024",
 			"tags": ["System Design", "Databases", "Scaling"],
 			"category": "Tech",
@@ -343,8 +299,6 @@
 		},
 		"api_security_best_practices": {
 			"title": "API Security Best Practices",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "28 Sept, 2024",
 			"tags": ["API", "Security", "Backend"],
 			"category": "Tech",
@@ -354,8 +308,6 @@
 		},
 		"implement_message_queue": {
 			"title": "How to Implement Message Queues in Your Backend Application",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "27 Sept, 2024",
 			"tags": ["Node.js", "Message Queue", "Backend"],
 			"category": "Tech",
@@ -365,8 +317,6 @@
 		},
 		"naming_api_endpoints": {
 			"title": "Best Practices for Naming API Endpoints",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "27 Sept, 2024",
 			"tags": ["API", "Endpoints"],
 			"category": "Tech",
@@ -376,8 +326,6 @@
 		},
 		"oauth_flows_explained": {
 			"title": "OAUTH 2.0 Flows Explained",
-			"author_name": "Trinc Academy",
-			"author_link": "www.instagram.com/trinc_academy",
 			"date": "27 Sept, 2024",
 			"tags": ["OAuth 2.0", "Backend", "Web Development"],
 			"category": "Tech",
