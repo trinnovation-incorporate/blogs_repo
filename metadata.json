@@ -1,12 +1,23 @@
 {
 	"blogs": {
+		"virtual_fitness_classes": {
+			"title": "Virtual Fitness Classes: The Future of Fitness",
+			"author_name": "Trinc Academy",
+			"author_link": "www.instagram.com/trinc_academy",
+			"date": "13 Dec, 2024",
+			"tags": ["Fitness", "Classes", "Virtual", "Future"],
+			"category": "Fitness",
+			"summary": "In today's fast-paced world, maintaining physical fitness has become more accessible than ever, thanks to virtual fitness classes.",
+			"content_url": "blogs/virtual_fitness_classes.html",
+			"display_image": "display/virtual_fitness_classes.jpeg"
+		},
 		"yoga_for_stress_relief_and_flexibility": {
 			"title": "Yoga for Stress Relief and Flexibility",
 			"author_name": "Trinc Academy",
 			"author_link": "www.instagram.com/trinc_academy",
 			"date": "13 Dec, 2024",
 			"tags": ["Yoga", "Stress Relief", "Flexibility", "Creativity"],
-			"category": "Fashion",
+			"category": "Fitness",
 			"summary": "In today's fast-paced world, stress has become a constant companion for many people.",
 			"content_url": "blogs/yoga_for_stress_relief_and_flexibility.html",
 			"display_image": "display/yoga_for_stress_relief_and_flexibility.jpg"
