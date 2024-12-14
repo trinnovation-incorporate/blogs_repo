@@ -1,5 +1,32 @@
 {
 	"blogs": {
+		"gut_health_nutrition": {
+			"title": "Gut Health and Nutrition: What to Eat",
+			"date": "14 Dec, 2024",
+			"tags": ["Gut Health", "Nutrition", "Eat", "Health"],
+			"category": "Fitness",
+			"summary": "Your gut health plays a vital role in overall well-being, affecting everything from digestion to mental health.",
+			"content_url": "blogs/gut_health_nutrition.html",
+			"display_image": "display/gut_health_nutrition.jpg"
+		},
+		"hiit_vs_steady_state_cardio": {
+			"title": "HIIT vs. Steady-State Cardio: Which is Better?",
+			"date": "14 Dec, 2024",
+			"tags": ["Intermittent", "Fasting", "Diet", "Health"],
+			"category": "Fitness",
+			"summary": "Cardiovascular exercise, often called cardio, is any exercise that raises your heart rate and helps improve the efficiency of your cardiovascular system.",
+			"content_url": "blogs/hiit_vs_steady_state_cardio.html",
+			"display_image": "display/hiit_vs_steady_state_cardio.jpg"
+		},
+		"hormonal_health": {
+			"title": "Hormonal Health and Its Impact on Fitness",
+			"date": "14 Dec, 2024",
+			"tags": ["Hormonal", "Health", "Impact", "Fitness"],
+			"category": "Fitness",
+			"summary": "Hormones play a fundamental role in nearly all aspects of human health, particularly in fitness.",
+			"content_url": "blogs/hormonal_health.html",
+			"display_image": "display/hormonal_health.webp"
+		},
 		"intermittent_fasting": {
 			"title": "Intermittent Fasting: Pros and Cons",
 			"date": "14 Dec, 2024",
