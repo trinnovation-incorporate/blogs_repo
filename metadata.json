@@ -1,10 +1,28 @@
 {
 	"blogs": {
+		"intermittent_fasting": {
+			"title": "Intermittent Fasting: Pros and Cons",
+			"date": "14 Dec, 2024",
+			"tags": ["Intermittent", "Fasting", "Diet", "Health"],
+			"category": "Fitness",
+			"summary": "Intermittent fasting (IF) has gained significant popularity in recent years as a health trend. Proponents claim it offers numerous benefits, while critics highlight potential downsides.",
+			"content_url": "blogs/intermittent_fasting.html",
+			"display_image": "display/intermittent_fasting.webp"
+		},
+		"mental_health_exercise": {
+			"title": "Mental Health and Exercise: The Connection",
+			"date": "14 Dec, 2024",
+			"tags": ["Mental Health", "Exercise", "Connection", "Health"],
+			"category": "Fitness",
+			"summary": "Mental health and physical health are often treated as separate entities, but they are deeply intertwined.",
+			"content_url": "blogs/mental_health_exercise.html",
+			"display_image": "display/mental_health_exercise.jpg"
+		},
 		"nutrition_for_building_muscles": {
 			"title": "Nutrition Tips for Building Muscle",
 			"date": "13 Dec, 2024",
 			"tags": ["Nutrition", "Building", "Muscle", "Tips"],
-			"category": "Fashion",
+			"category": "Fitness",
 			"summary": "Building muscle requires not just hard work in the gym, but also proper nutrition.",
 			"content_url": "blogs/nutrition_for_building_muscles.html",
 			"display_image": "display/nutrition_for_building_muscles.webp"
