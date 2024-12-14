@@ -1,5 +1,32 @@
 {
 	"blogs": {
+		"investing_for_beginners": {
+			"title": "Investing for Beginners: What You Need to Know",
+			"date": "14 Dec, 2024",
+			"tags": ["Investing", "Beginners", "Finance", "Money"],
+			"category": "Finance",
+			"summary": "Investing is one of the most powerful tools for building wealth, and understanding the basics can help you make informed decisions about your financial future.",
+			"content_url": "blogs/investing_for_beginners.html",
+			"display_image": "display/investing_for_beginners.webp"
+		},
+		"how_to_get_debt_free": {
+			"title": "How to Get Out of Debt and Stay Debt-Free",
+			"date": "14 Dec, 2024",
+			"tags": ["Debt", "Debt-Free", "Eat", "Health"],
+			"category": "Finance",
+			"summary": "Debt can feel like a heavy burden, but getting out of debt is a realistic and achievable goal.",
+			"content_url": "blogs/how_to_get_debt_free.html",
+			"display_image": "display/how_to_get_debt_free.jpeg"
+		},
+		"financial_mistakes_to_avoid": {
+			"title": "Financial Mistakes to Avoid in Your Early Days",
+			"date": "14 Dec, 2024",
+			"tags": ["Financial", "Mistakes", "Planning", "Health"],
+			"category": "Finance",
+			"summary": "Managing your finances wisely is crucial at every stage of life. The financial decisions you make in your early days can significantly impact your financial future.",
+			"content_url": "blogs/financial_mistakes_to_avoid.html",
+			"display_image": "display/financial_mistakes_to_avoid.jpg"
+		},
 		"gut_health_nutrition": {
 			"title": "Gut Health and Nutrition: What to Eat",
 			"date": "14 Dec, 2024",
@@ -12,7 +39,7 @@
 		"hiit_vs_steady_state_cardio": {
 			"title": "HIIT vs. Steady-State Cardio: Which is Better?",
 			"date": "14 Dec, 2024",
-			"tags": ["Intermittent", "Fasting", "Diet", "Health"],
+			"tags": ["Cardio", "Cardiovascular", "Exercise", "Heart"],
 			"category": "Fitness",
 			"summary": "Cardiovascular exercise, often called cardio, is any exercise that raises your heart rate and helps improve the efficiency of your cardiovascular system.",
 			"content_url": "blogs/hiit_vs_steady_state_cardio.html",
